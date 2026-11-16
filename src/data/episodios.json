@@ -1,0 +1,2208 @@
+[
+  {
+    "id": "1.0",
+    "codigo": "1",
+    "titulo": "1. Introdução ao curso",
+    "ilhaId": "ilha-0",
+    "ilhaNome": "Base Camp",
+    "duracaoSegundos": 65,
+    "videoResumo": "Visão geral do fluxo VDC Electrical: como transformar projetos executivos em Shop Drawings construtivos livres de interferências em campo.",
+    "videoTopicos": [
+      "Diferença entre projeto executivo (LOD 300) e Shop Drawing (LOD 350/400)",
+      "O papel do engenheiro VDC na sala elétrica e corredores",
+      "Como funciona o ciclo Pós-Episódio: Briefing, Inspeção 3D e Prática"
+    ],
+    "quiz": [
+      {
+        "id": "1.0-q1",
+        "enunciado": "Ao iniciar a modelagem construtiva de uma sala elétrica, qual elemento define a referência principal de entrada dos alimentadores e o cálculo das zonas de acesso?",
+        "contexto_normativo": "VDC Workflow · LOD 350",
+        "alternativas": [
+          {
+            "id": "a",
+            "texto": "Painel Principal (Painel_QGBT)",
+            "correta": true,
+            "objeto_alvo": "Painel_QGBT",
+            "camera_foco": [2.2, 1.9, 2.4],
+            "alvo_lookat": [-1.8, 1.2, -1.6],
+            "rotulo": "Painel_QGBT · Referência Primária",
+            "feedback": "Correto! O Painel QGBT é a âncora espacial da sala elétrica. Sua posição e profundidade determinam a zona de segurança frontal (NEC 110.26) e os pontos de chegada dos eletrodutos."
+          },
+          {
+            "id": "b",
+            "texto": "Duto de Insuflamento HVAC (Duct_HVAC)",
+            "correta": false,
+            "objeto_alvo": "Duct_HVAC",
+            "camera_foco": [2.6, 2.8, 2.2],
+            "alvo_lookat": [0.4, 2.65, -0.4],
+            "rotulo": "Duct_HVAC · Disciplina Mecânica",
+            "feedback": "Incorreto. O duto HVAC pertence à disciplina de mecânica e impõe restrições de pé-direito, mas não é a âncora elétrica da sala."
+          },
+          {
+            "id": "c",
+            "texto": "Eletroduto Ramal 1/2\" (Conduit_05_HalfInch)",
+            "correta": false,
+            "objeto_alvo": "Conduit_05_HalfInch",
+            "camera_foco": [1.8, 2.3, 1.6],
+            "alvo_lookat": [0.1, 2.15, -1.0],
+            "rotulo": "Conduit_05_HalfInch · Ramal Secundário",
+            "feedback": "Incorreto. Ramais de 1/2\" são roteados após a definição do posicionamento do quadro principal e dos suportes estruturais."
+          }
+        ]
+      }
+    ],
+    "atividadePratica": {
+      "ativa": true,
+      "titulo": "Checklist de Setup Inicial BIM",
+      "instrucoes": "Exporte um print ou PDF da vista 3D inicial do seu template elétrico mostrando a organização de vistas e o painel principal posicionado.",
+      "entregavel": "Imagem PNG/JPG ou PDF da vista 3D"
+    }
+  },
+  {
+    "id": "2.1",
+    "codigo": "2.1",
+    "titulo": "2.1 Painel",
+    "ilhaId": "ilha-1",
+    "ilhaNome": "Conceitos Elétricos",
+    "duracaoSegundos": 58,
+    "videoResumo": "Anatomia de um painel elétrico (Panelboard) em campo: barramentos, disjuntor geral, espaçamento de dobra de cabos e pontos de entrada de eletrodutos.",
+    "videoTopicos": [
+      "Dimensões reais de envoltório vs espaço de trabalho",
+      "Top entry vs bottom entry na sala elétrica",
+      "Identificação de TAG e tensão nominal"
+    ],
+    "quiz": [
+      {
+        "id": "2.1-q1",
+        "enunciado": "Qual componente representa o quadro de distribuição geral onde convergem os eletrodutos alimentadores na parede técnica?",
+        "contexto_normativo": "NEC Art. 408 · Panelboards",
+        "alternativas": [
+          {
+            "id": "a",
+            "texto": "Painel QGBT (Painel_QGBT)",
+            "correta": true,
+            "objeto_alvo": "Painel_QGBT",
+            "camera_foco": [0.8, 1.6, 1.8],
+            "alvo_lookat": [-1.8, 1.25, -1.6],
+            "rotulo": "Painel_QGBT · 480/277V",
+            "feedback": "Exato! O QGBT centraliza a proteção geral e os alimentadores. No modelo BIM, suas faces laterais e superior devem prever folga para curvas e conectores."
+          },
+          {
+            "id": "b",
+            "texto": "Suporte Trapeze (Hanger_01)",
+            "correta": false,
+            "objeto_alvo": "Hanger_01",
+            "camera_foco": [1.8, 2.2, 2.0],
+            "alvo_lookat": [0.2, 2.15, -0.35],
+            "rotulo": "Hanger_01 · Perfilado Unistrut",
+            "feedback": "Incorreto. O Hanger_01 é o suporte estrutural suspenso para conduítes, não o painel de distribuição."
+          },
+          {
+            "id": "c",
+            "texto": "Tubulação Hidráulica Frontal (Pipe_Conflito_Frontal)",
+            "correta": false,
+            "objeto_alvo": "Pipe_Conflito_Frontal",
+            "camera_foco": [0.5, 1.7, 1.4],
+            "alvo_lookat": [-1.55, 1.6, -0.75],
+            "rotulo": "Pipe_Conflito_Frontal · Tubulação alheia",
+            "feedback": "Incorreto. Essa tubulação é um interferente de outra disciplina invadindo a zona frontal do painel."
+          }
+        ]
+      }
+    ],
+    "atividadePratica": {
+      "ativa": false,
+      "titulo": "Atividade Opcional",
+      "instrucoes": "Envie caso queira feedback do instrutor sobre a ficha técnica de um painel.",
+      "entregavel": "Imagem ou PDF"
+    }
+  },
+  {
+    "id": "2.2",
+    "codigo": "2.2",
+    "titulo": "2.2 Transformers",
+    "ilhaId": "ilha-1",
+    "ilhaNome": "Conceitos Elétricos",
+    "duracaoSegundos": 62,
+    "videoResumo": "Transformadores secos rebaixadores (480V para 208/120V): dissipação térmica, vibração mecânica e distância mínima de ventilação nas paredes.",
+    "videoTopicos": [
+      "Conexões flexíveis (Liquid-Tight) para isolar vibração",
+      "Afastamento traseiro e lateral para ventilação",
+      "Aterramento do neutro derivado (Separately Derived System)"
+    ],
+    "quiz": [
+      {
+        "id": "2.2-q1",
+        "enunciado": "Antes de distribuir os ramais secundários para o QGBT, qual elemento da sala precisa estar livre de dutos diretamente acima de zonas críticas de manutenção?",
+        "contexto_normativo": "NEC 450.9 · Ventilação e Espaço",
+        "alternativas": [
+          {
+            "id": "a",
+            "texto": "Painel de Distribuição (Painel_QGBT)",
+            "correta": true,
+            "objeto_alvo": "Painel_QGBT",
+            "camera_foco": [1.0, 2.0, 2.1],
+            "alvo_lookat": [-1.8, 1.3, -1.6],
+            "rotulo": "Painel_QGBT · Espaço Dedicado",
+            "feedback": "Correto! Tanto painéis quanto transformadores exigem espaço elétrico dedicado acima de sua projeção vertical, livre de tubulações estranhas."
+          },
+          {
+            "id": "b",
+            "texto": "Eletroduto 3/4\" (Conduit_075_ThreeQuarter)",
+            "correta": false,
+            "objeto_alvo": "Conduit_075_ThreeQuarter",
+            "camera_foco": [1.8, 2.35, 1.5],
+            "alvo_lookat": [0.3, 2.15, -0.7],
+            "rotulo": "Conduit_075_ThreeQuarter",
+            "feedback": "Incorreto. O eletroduto de 3/4\" faz parte da infraestrutura aérea de distribuição, não do equipamento de conversão ou distribuição."
+          },
+          {
+            "id": "c",
+            "texto": "Duto HVAC (Duct_HVAC)",
+            "correta": false,
+            "objeto_alvo": "Duct_HVAC",
+            "camera_foco": [2.2, 2.9, 1.8],
+            "alvo_lookat": [0.4, 2.65, -0.4],
+            "rotulo": "Duct_HVAC",
+            "feedback": "Incorreto. O duto HVAC atende à climatização e deve contornar as projeções dos quadros elétricos."
+          }
+        ]
+      }
+    ],
+    "atividadePratica": {
+      "ativa": false,
+      "titulo": "Croqui de Implantação de Transformador",
+      "instrucoes": "Opcional: envie um corte mostrando o afastamento da parede.",
+      "entregavel": "Imagem ou PDF"
+    }
+  },
+  {
+    "id": "2.3",
+    "codigo": "2.3",
+    "titulo": "2.3 ATS/UPS",
+    "ilhaId": "ilha-1",
+    "ilhaNome": "Conceitos Elétricos",
+    "duracaoSegundos": 68,
+    "videoResumo": "Chaves de Transferência Automática (ATS) e No-Breaks (UPS): separação física entre circuitos normais e de emergência no encaminhamento BIM.",
+    "videoTopicos": [
+      "Segregação obrigatória de eletrodutos Normal vs Emergência",
+      "Peso em laje de bancos de baterias UPS",
+      "Rotas redundantes no Shop Drawing"
+    ],
+    "quiz": [
+      {
+        "id": "2.3-q1",
+        "enunciado": "Para manter a segregação física entre linhas de alimentação normal e emergência no mesmo corredor de teto, qual recurso utilizamos para organizar os eletrodutos paralelos?",
+        "contexto_normativo": "NEC Art. 700.10 · Circuitos de Emergência",
+        "alternativas": [
+          {
+            "id": "a",
+            "texto": "Rack Trapeze Compartilhado com espaçamento (Hanger_01)",
+            "correta": true,
+            "objeto_alvo": "Hanger_01",
+            "camera_foco": [1.9, 2.35, 1.7],
+            "alvo_lookat": [0.2, 2.15, -0.35],
+            "rotulo": "Hanger_01 · Organização de Linhas",
+            "feedback": "Correto! Eletrodutos distintos (Normal vs Emergência) podem dividir o mesmo suporte trapeze mantendo cada condutor em seu respectivo eletroduto dedicado."
+          },
+          {
+            "id": "b",
+            "texto": "Misturar todos os cabos dentro do Conduit_05_HalfInch",
+            "correta": false,
+            "objeto_alvo": "Conduit_05_HalfInch",
+            "camera_foco": [1.6, 2.4, 1.2],
+            "alvo_lookat": [0.1, 2.15, -1.0],
+            "rotulo": "Conduit_05_HalfInch · Violação NEC",
+            "feedback": "Incorreto! A norma NEC 700.10(B) proíbe estritamente misturar condutores de emergência e normais no mesmo eletroduto."
+          },
+          {
+            "id": "c",
+            "texto": "Passar pelo interior do Duct_HVAC",
+            "correta": false,
+            "objeto_alvo": "Duct_HVAC",
+            "camera_foco": [2.2, 2.8, 1.8],
+            "alvo_lookat": [0.4, 2.65, -0.4],
+            "rotulo": "Duct_HVAC · Proibido",
+            "feedback": "Incorreto. Eletrodutos não devem ser roteados internamente a dutos de ar-condicionado."
+          }
+        ]
+      }
+    ],
+    "atividadePratica": {
+      "ativa": false,
+      "titulo": "Diagrama de Segregação",
+      "instrucoes": "Envie uma planta indicando eletrodutos normais e de emergência.",
+      "entregavel": "Imagem ou PDF"
+    }
+  },
+  {
+    "id": "2.4",
+    "codigo": "2.4",
+    "titulo": "2.4 Switchboard",
+    "ilhaId": "ilha-1",
+    "ilhaNome": "Conceitos Elétricos",
+    "duracaoSegundos": 60,
+    "videoResumo": "Switchboards autoportantes apoiados no piso: acesso traseiro/frontal, base de concreto (housekeeping pad) e chegada subterrânea vs aérea.",
+    "videoTopicos": [
+      "Diferença prática entre Panelboard e Switchboard",
+      "Folga de 900mm a 1200mm conforme tensão",
+      "Compatibilização da base com arquitetura"
+    ],
+    "quiz": [
+      {
+        "id": "2.4-q1",
+        "enunciado": "Na frente de um quadro principal/switchboard, qual objeto está causando bloqueio físico da abertura de portas e da distância mínima de trabalho?",
+        "contexto_normativo": "NEC 110.26 · Working Space",
+        "alternativas": [
+          {
+            "id": "a",
+            "texto": "Tubulação Frontal (Pipe_Conflito_Frontal)",
+            "correta": true,
+            "objeto_alvo": "Pipe_Conflito_Frontal",
+            "camera_foco": [0.4, 1.8, 1.5],
+            "alvo_lookat": [-1.55, 1.6, -0.75],
+            "rotulo": "Pipe_Conflito_Frontal · Bloqueio Crítico",
+            "feedback": "Exato! Essa tubulação atravessa exatamente a frente do QGBT dentro da profundidade de 1,0m de espaço de trabalho, configurando clash crítico."
+          },
+          {
+            "id": "b",
+            "texto": "Eletroduto 3/4\" Aéreo (Conduit_075_ThreeQuarter)",
+            "correta": false,
+            "objeto_alvo": "Conduit_075_ThreeQuarter",
+            "camera_foco": [1.8, 2.35, 1.5],
+            "alvo_lookat": [0.3, 2.15, -0.7],
+            "rotulo": "Conduit_075_ThreeQuarter · Cota Segura",
+            "feedback": "Incorreto. O eletroduto de 3/4\" corre na cota superior da sala fora da zona frontal do operador."
+          },
+          {
+            "id": "c",
+            "texto": "Suporte Trapeze (Hanger_01)",
+            "correta": false,
+            "objeto_alvo": "Hanger_01",
+            "camera_foco": [1.9, 2.3, 1.8],
+            "alvo_lookat": [0.2, 2.15, -0.35],
+            "rotulo": "Hanger_01 · Suporte Elevado",
+            "feedback": "Incorreto. O suporte está fixado na laje a mais de 2,10m de altura, sem obstruir o quadro."
+          }
+        ]
+      }
+    ],
+    "atividadePratica": {
+      "ativa": false,
+      "titulo": "Detalhe de Housekeeping Pad",
+      "instrucoes": "Opcional: envie um corte do painel apoiado sobre base de concreto.",
+      "entregavel": "Imagem ou PDF"
+    }
+  },
+  {
+    "id": "2.5",
+    "codigo": "2.5",
+    "titulo": "2.5 Single line",
+    "ilhaId": "ilha-1",
+    "ilhaNome": "Conceitos Elétricos",
+    "duracaoSegundos": 55,
+    "videoResumo": "Leitura ágil do Diagrama Unifilar (Single-Line Diagram) para extrair diâmetros de eletrodutos, bitolas e quantidade de condutores antes de modelar.",
+    "videoTopicos": [
+      "Decodificando notações como 3#4 + 1#8G in 1\" EMT",
+      "Rastreando origem e destino (From / To)",
+      "Conferência cruzada entre Unifilar e Planta"
+    ],
+    "quiz": [
+      {
+        "id": "2.5-q1",
+        "enunciado": "Um unifilar especifica um alimentador secundário em eletroduto EMT de 3/4\" saindo do painel para a zona de distribuição. Qual elemento 3D corresponde a essa bitola?",
+        "contexto_normativo": "Single-Line · Conduit Tagging",
+        "alternativas": [
+          {
+            "id": "a",
+            "texto": "Conduit_075_ThreeQuarter",
+            "correta": true,
+            "objeto_alvo": "Conduit_075_ThreeQuarter",
+            "camera_foco": [1.9, 2.35, 1.4],
+            "alvo_lookat": [0.3, 2.15, -0.7],
+            "rotulo": "Conduit_075_ThreeQuarter · 3/4\" EMT",
+            "feedback": "Correto! 0.75 polegadas equivale a 3/4\" (21mm nominal), representado exatamente pela linha Conduit_075_ThreeQuarter."
+          },
+          {
+            "id": "b",
+            "texto": "Conduit_05_HalfInch",
+            "correta": false,
+            "objeto_alvo": "Conduit_05_HalfInch",
+            "camera_foco": [1.6, 2.35, 1.2],
+            "alvo_lookat": [0.1, 2.15, -1.0],
+            "rotulo": "Conduit_05_HalfInch · 1/2\" EMT",
+            "feedback": "Incorreto. Conduit_05 representa 0.5 polegada (1/2\"), menor que o especificado no unifilar."
+          },
+          {
+            "id": "c",
+            "texto": "Duct_HVAC",
+            "correta": false,
+            "objeto_alvo": "Duct_HVAC",
+            "camera_foco": [2.4, 2.8, 1.9],
+            "alvo_lookat": [0.4, 2.65, -0.4],
+            "rotulo": "Duct_HVAC · Duto Mecânico",
+            "feedback": "Incorreto. O duto HVAC não faz parte do diagrama unifilar elétrico."
+          }
+        ]
+      }
+    ],
+    "atividadePratica": {
+      "ativa": false,
+      "titulo": "Extração de Unifilar",
+      "instrucoes": "Opcional: envie uma tabela relacionando TAGs do unifilar com diâmetros EMT.",
+      "entregavel": "Imagem ou PDF"
+    }
+  },
+  {
+    "id": "2.6",
+    "codigo": "2.6",
+    "titulo": "2.6 Conduit vs Conductor",
+    "ilhaId": "ilha-1",
+    "ilhaNome": "Conceitos Elétricos",
+    "duracaoSegundos": 52,
+    "videoResumo": "No BIM modelamos a infraestrutura física (Conduit), mas sua geometria é governada pelos cabos internos (Conductors): raio de curvatura e caixas de passagem.",
+    "videoTopicos": [
+      "EMT vs RMC vs PVC Schedule 40/80",
+      "Condutores THHN/THWN-2 vs XHHW-2",
+      "Limite máximo de 360° em curvas entre caixas de puxamento"
+    ],
+    "quiz": [
+      {
+        "id": "2.6-q1",
+        "enunciado": "Qual elemento da cena representa um eletroduto metálico leve (EMT) de 1/2\" usado para circuitos terminais de iluminação e tomadas?",
+        "contexto_normativo": "NEC Art. 358 · EMT",
+        "alternativas": [
+          {
+            "id": "a",
+            "texto": "Conduit_05_HalfInch",
+            "correta": true,
+            "objeto_alvo": "Conduit_05_HalfInch",
+            "camera_foco": [1.5, 2.3, 1.2],
+            "alvo_lookat": [0.1, 2.15, -1.0],
+            "rotulo": "Conduit_05_HalfInch · EMT 1/2\"",
+            "feedback": "Perfeito! O EMT de 1/2\" (16mm) é o padrão mínimo em instalações comerciais para circuitos ramais até 20A."
+          },
+          {
+            "id": "b",
+            "texto": "Painel_QGBT",
+            "correta": false,
+            "objeto_alvo": "Painel_QGBT",
+            "camera_foco": [0.8, 1.6, 1.8],
+            "alvo_lookat": [-1.8, 1.25, -1.6],
+            "rotulo": "Painel_QGBT · Envoltório",
+            "feedback": "Incorreto. O QGBT é o quadro de distribuição onde os eletrodutos se conectam."
+          },
+          {
+            "id": "c",
+            "texto": "Hanger_01",
+            "correta": false,
+            "objeto_alvo": "Hanger_01",
+            "camera_foco": [1.9, 2.3, 1.7],
+            "alvo_lookat": [0.2, 2.15, -0.35],
+            "rotulo": "Hanger_01 · Suportação",
+            "feedback": "Incorreto. O Hanger_01 é o suporte mecânico que sustenta os eletrodutos."
+          }
+        ]
+      }
+    ],
+    "atividadePratica": {
+      "ativa": false,
+      "titulo": "Comparativo EMT vs Condutores",
+      "instrucoes": "Opcional: envie um detalhe de curva 90° respeitando o raio mínimo.",
+      "entregavel": "Imagem ou PDF"
+    }
+  },
+  {
+    "id": "2.7",
+    "codigo": "2.7",
+    "titulo": "2.7 Voltage vs Power",
+    "ilhaId": "ilha-1",
+    "ilhaNome": "Conceitos Elétricos",
+    "duracaoSegundos": 56,
+    "videoResumo": "Como Tensão (V) e Potência (VA/W/kVA) impactam diretamente o volume físico das tubulações e painéis no modelo 3D.",
+    "videoTopicos": [
+      "Sistemas 208/120V vs 480/277V em edificações comerciais",
+      "Por que tensões maiores reduzem diâmetro de eletrodutos",
+      "Cálculo de potência aparente (kVA) nos parâmetros do Revit"
+    ],
+    "quiz": [
+      {
+        "id": "2.7-q1",
+        "enunciado": "Para alimentar uma carga trifásica de 45 kVA em 208V versus 480V, o circuito de menor tensão exige cabos mais grossos e maior diâmetro de eletroduto. Qual peça da cena comporta alimentadores maiores entre as duas linhas aéreas?",
+        "contexto_normativo": "Power = √3 · V · I · fp",
+        "alternativas": [
+          {
+            "id": "a",
+            "texto": "Conduit_075_ThreeQuarter",
+            "correta": true,
+            "objeto_alvo": "Conduit_075_ThreeQuarter",
+            "camera_foco": [1.8, 2.35, 1.4],
+            "alvo_lookat": [0.3, 2.15, -0.7],
+            "rotulo": "Conduit_075_ThreeQuarter · Maior Capacidade",
+            "feedback": "Correto! Entre 1/2\" e 3/4\", o Conduit_075 oferece maior área interna para acomodar condutores de maior bitola quando a corrente sobe."
+          },
+          {
+            "id": "b",
+            "texto": "Conduit_05_HalfInch",
+            "correta": false,
+            "objeto_alvo": "Conduit_05_HalfInch",
+            "camera_foco": [1.5, 2.3, 1.2],
+            "alvo_lookat": [0.1, 2.15, -1.0],
+            "rotulo": "Conduit_05_HalfInch · Menor Área",
+            "feedback": "Incorreto. O eletroduto de 1/2\" possui menor área útil e restringe rapidamente a bitola dos cabos."
+          },
+          {
+            "id": "c",
+            "texto": "Pipe_Conflito_Frontal",
+            "correta": false,
+            "objeto_alvo": "Pipe_Conflito_Frontal",
+            "camera_foco": [0.4, 1.8, 1.5],
+            "alvo_lookat": [-1.55, 1.6, -0.75],
+            "rotulo": "Pipe_Conflito_Frontal · Tubulação Hidráulica",
+            "feedback": "Incorreto. Este elemento é uma tubulação mecânica/hidráulica em conflito com a zona do painel."
+          }
+        ]
+      }
+    ],
+    "atividadePratica": {
+      "ativa": false,
+      "titulo": "Planilha Rápida de Potência",
+      "instrucoes": "Opcional: envie print dos parâmetros elétricos configurados no painel.",
+      "entregavel": "Imagem ou PDF"
+    }
+  },
+  {
+    "id": "2.8",
+    "codigo": "2.8",
+    "titulo": "2.8 Current",
+    "ilhaId": "ilha-1",
+    "ilhaNome": "Conceitos Elétricos",
+    "duracaoSegundos": 54,
+    "videoResumo": "Ampacidade, fatores de correção por temperatura e agrupamento (derating) — quando a corrente real exige dividir um home-run em múltiplos eletrodutos.",
+    "videoTopicos": [
+      "Tabelas NEC 310.16 para condutores de cobre",
+      "Fator de agrupamento acima de 3 condutores portadores de corrente",
+      "Impacto térmico em salas mecânicas e coberturas"
+    ],
+    "quiz": [
+      {
+        "id": "2.8-q1",
+        "enunciado": "Qual componente metálico na sala elétrica abriga os barramentos dimensionados para suportar a corrente total somada de todos os alimentadores?",
+        "contexto_normativo": "NEC Art. 310 · Ampacidade",
+        "alternativas": [
+          {
+            "id": "a",
+            "texto": "Painel_QGBT",
+            "correta": true,
+            "objeto_alvo": "Painel_QGBT",
+            "camera_foco": [0.9, 1.65, 1.9],
+            "alvo_lookat": [-1.8, 1.25, -1.6],
+            "rotulo": "Painel_QGBT · Barramento Geral",
+            "feedback": "Exato! O barramento interno do Painel QGBT concentra a corrente nominal do sistema (ex: 400A a 1200A) antes da subdivisão nos disjuntores."
+          },
+          {
+            "id": "b",
+            "texto": "Duct_HVAC",
+            "correta": false,
+            "objeto_alvo": "Duct_HVAC",
+            "camera_foco": [2.4, 2.8, 1.9],
+            "alvo_lookat": [0.4, 2.65, -0.4],
+            "rotulo": "Duct_HVAC · Duto de Ar",
+            "feedback": "Incorreto. O duto de ar apenas influencia a temperatura ambiente da sala caso haja trocas térmicas."
+          },
+          {
+            "id": "c",
+            "texto": "Hanger_01",
+            "correta": false,
+            "objeto_alvo": "Hanger_01",
+            "camera_foco": [1.9, 2.3, 1.7],
+            "alvo_lookat": [0.2, 2.15, -0.35],
+            "rotulo": "Hanger_01 · Suporte",
+            "feedback": "Incorreto. O suporte sustenta mecanicamente o peso dos eletrodutos, sem conduzir corrente."
+          }
+        ]
+      }
+    ],
+    "atividadePratica": {
+      "ativa": false,
+      "titulo": "Estudo de Agrupamento",
+      "instrucoes": "Opcional: envie cálculo de derating para um rack com 6 circuitos.",
+      "entregavel": "Imagem ou PDF"
+    }
+  },
+  {
+    "id": "2.9",
+    "codigo": "2.9",
+    "titulo": "2.9 Conduit fill",
+    "ilhaId": "ilha-1",
+    "ilhaNome": "Conceitos Elétricos",
+    "duracaoSegundos": 72,
+    "videoResumo": "Regra dos 40% de ocupação (Conduit Fill) segundo a NEC Capítulo 9: como evitar superaquecimento e travamento de puxamento de cabos na obra.",
+    "videoTopicos": [
+      "1 condutor: 53% · 2 condutores: 31% · 3+ condutores: 40% de taxa máxima",
+      "Por que nunca lotar um eletroduto de 1/2\" com múltiplos circuitos",
+      "Como identificar visualmente no modelo 3D a necessidade de upgrade de 1/2\" para 3/4\""
+    ],
+    "quiz": [
+      {
+        "id": "2.9-q1",
+        "enunciado": "Você precisa passar 9 condutores #10 AWG THHN em um único trecho. Sabendo que a taxa máxima de ocupação (NEC Cap. 9) para 3 ou mais cabos é 40%, qual eletroduto da sala elétrica atende com segurança sem travar o puxamento?",
+        "contexto_normativo": "NEC Chapter 9, Table 1 & Table 4 · 40% Fill",
+        "alternativas": [
+          {
+            "id": "a",
+            "texto": "Eletroduto de 3/4\" (Conduit_075_ThreeQuarter)",
+            "correta": true,
+            "objeto_alvo": "Conduit_075_ThreeQuarter",
+            "camera_foco": [1.65, 2.32, 1.25],
+            "alvo_lookat": [0.3, 2.15, -0.7],
+            "rotulo": "Conduit_075_ThreeQuarter · APROVADO (40% Fill)",
+            "feedback": "Correto! 9 cabos #10 THHN somam ~0.1899 in². O EMT 3/4\" permite até 0.213 in² nos 40% de ocupação (até 10 cabos #10), garantindo puxamento suave e dissipação térmica."
+          },
+          {
+            "id": "b",
+            "texto": "Eletroduto de 1/2\" (Conduit_05_HalfInch)",
+            "correta": false,
+            "objeto_alvo": "Conduit_05_HalfInch",
+            "camera_foco": [1.55, 2.3, 1.1],
+            "alvo_lookat": [0.1, 2.15, -1.0],
+            "rotulo": "Conduit_05_HalfInch · REPROVADO (Excede 40%)",
+            "feedback": "Incorreto! O EMT 1/2\" comporta no máximo 5 cabos #10 THHN (área 40% = 0.122 in²). Colocar 9 cabos viola a norma NEC e causará danos à isolação durante o puxamento."
+          },
+          {
+            "id": "c",
+            "texto": "Utilizar o perfilado do suporte (Hanger_01) como canaleta aberta",
+            "correta": false,
+            "objeto_alvo": "Hanger_01",
+            "camera_foco": [1.85, 2.3, 1.6],
+            "alvo_lookat": [0.2, 2.15, -0.35],
+            "rotulo": "Hanger_01 · Uso Indevido",
+            "feedback": "Incorreto! O perfilado Unistrut do Hanger_01 é elemento estrutural de fixação, não canaleta certificada para passagem de condutores THHN soltos."
+          },
+          {
+            "id": "d",
+            "texto": "Instalar diretamente dentro do duto (Duct_HVAC)",
+            "correta": false,
+            "objeto_alvo": "Duct_HVAC",
+            "camera_foco": [2.2, 2.85, 1.7],
+            "alvo_lookat": [0.4, 2.65, -0.4],
+            "rotulo": "Duct_HVAC · Proibido NEC 300.22",
+            "feedback": "Incorreto! A norma NEC 300.22 proíbe a passagem de cabos comuns dentro de dutos de transporte de ar ou fumaça."
+          }
+        ]
+      },
+      {
+        "id": "2.9-q2",
+        "enunciado": "Qual a porcentagem máxima de área interna permitida pela norma NEC ao lançar 4 condutores fase + 1 terra dentro de qualquer eletroduto?",
+        "contexto_normativo": "NEC Chapter 9, Table 1",
+        "alternativas": [
+          {
+            "id": "a",
+            "texto": "Máximo de 40% da área interna útil (Conduit_075_ThreeQuarter)",
+            "correta": true,
+            "objeto_alvo": "Conduit_075_ThreeQuarter",
+            "camera_foco": [1.7, 2.35, 1.3],
+            "alvo_lookat": [0.3, 2.15, -0.7],
+            "rotulo": "Regra dos 40% · 3+ Condutores",
+            "feedback": "Correto! Acima de 2 condutores (ou seja, 3 ou mais cabos, incluindo o condutor de aterramento), o limite normativo rígido é 40% de taxa de ocupação."
+          },
+          {
+            "id": "b",
+            "texto": "Máximo de 53% no eletroduto de 1/2\" (Conduit_05_HalfInch)",
+            "correta": false,
+            "objeto_alvo": "Conduit_05_HalfInch",
+            "camera_foco": [1.55, 2.3, 1.1],
+            "alvo_lookat": [0.1, 2.15, -1.0],
+            "rotulo": "53% aplica-se apenas a 1 cabo",
+            "feedback": "Incorreto. O limite de 53% aplica-se exclusivamente quando há apenas 1 condutor dentro do eletroduto."
+          },
+          {
+            "id": "c",
+            "texto": "Máximo de 75% desde que ancorado no Painel_QGBT",
+            "correta": false,
+            "objeto_alvo": "Painel_QGBT",
+            "camera_foco": [0.9, 1.7, 2.0],
+            "alvo_lookat": [-1.8, 1.25, -1.6],
+            "rotulo": "Sem respaldo normativo",
+            "feedback": "Incorreto. Nunca se utiliza 75% de ocupação em eletrodutos contínuos (apenas nipples curtos de até 24 polegadas chegam a 60%)."
+          }
+        ]
+      }
+    ],
+    "atividadePratica": {
+      "ativa": true,
+      "titulo": "Dimensionamento de Conduit Fill no Shop Drawing",
+      "instrucoes": "Anexe uma imagem ou PDF de uma tabela/planta de Shop Drawing com a identificação de pelo menos 2 trechos EMT (1/2\" e 3/4\") indicando a quantidade de cabos por eletroduto dentro da regra dos 40%.",
+      "entregavel": "Print do Revit/AutoCAD ou PDF da prancha"
+    }
+  },
+  {
+    "id": "2.10",
+    "codigo": "2.10",
+    "titulo": "2.10 Voltage drop",
+    "ilhaId": "ilha-1",
+    "ilhaNome": "Conceitos Elétricos",
+    "duracaoSegundos": 58,
+    "videoResumo": "Queda de tensão em longos percursos: por que a rota geométrica exata medida no modelo 3D define se a bitola do cabo precisa subir.",
+    "videoTopicos": [
+      "Limite recomendado NEC: 3% no ramal e 5% combinado",
+      "Medindo o comprimento real com desvios verticais no Revit",
+      "Impacto na troca de bitola e diâmetro do conduit"
+    ],
+    "quiz": [
+      {
+        "id": "2.10-q1",
+        "enunciado": "Um circuito de iluminação percorre 95 metros com vários desvios verticais. Ao aumentar a bitola de #12 para #10 AWG para compensar a queda de tensão, qual linha aérea da sala acomoda com maior folga o aumento de volume?",
+        "contexto_normativo": "NEC 210.19(A) Informational Note · Max 3%/5%",
+        "alternativas": [
+          {
+            "id": "a",
+            "texto": "Conduit_075_ThreeQuarter",
+            "correta": true,
+            "objeto_alvo": "Conduit_075_ThreeQuarter",
+            "camera_foco": [1.8, 2.35, 1.4],
+            "alvo_lookat": [0.3, 2.15, -0.7],
+            "rotulo": "Conduit_075_ThreeQuarter · Folga para Voltage Drop",
+            "feedback": "Correto! Aumentos de bitola por queda de tensão frequentemente forçam a subida de 1/2\" para 3/4\" antes mesmo da emissão do Shop Drawing."
+          },
+          {
+            "id": "b",
+            "texto": "Conduit_05_HalfInch",
+            "correta": false,
+            "objeto_alvo": "Conduit_05_HalfInch",
+            "camera_foco": [1.5, 2.3, 1.2],
+            "alvo_lookat": [0.1, 2.15, -1.0],
+            "rotulo": "Conduit_05_HalfInch · Limite Restrito",
+            "feedback": "Incorreto. O diâmetro de 1/2\" satura rapidamente quando elevamos os calibres dos cabos por queda de tensão."
+          },
+          {
+            "id": "c",
+            "texto": "Pipe_Conflito_Frontal",
+            "correta": false,
+            "objeto_alvo": "Pipe_Conflito_Frontal",
+            "camera_foco": [0.4, 1.8, 1.5],
+            "alvo_lookat": [-1.55, 1.6, -0.75],
+            "rotulo": "Pipe_Conflito_Frontal",
+            "feedback": "Incorreto. Trata-se de uma interferência hidráulica frontal ao painel."
+          }
+        ]
+      }
+    ],
+    "atividadePratica": {
+      "ativa": false,
+      "titulo": "Cálculo de Comprimento 3D",
+      "instrucoes": "Opcional: envie print de tabela Schedule com comprimento de circuito.",
+      "entregavel": "Imagem ou PDF"
+    }
+  },
+  {
+    "id": "2.11",
+    "codigo": "2.11",
+    "titulo": "2.11 Panel schedule",
+    "ilhaId": "ilha-1",
+    "ilhaNome": "Conceitos Elétricos",
+    "duracaoSegundos": 60,
+    "videoResumo": "Leitura e auditoria do Quadro de Cargas (Panel Schedule): balanceamento de fases A-B-C, disjuntores reserva (Spare/Space) e fator de demanda.",
+    "videoTopicos": [
+      "Associação entre circuitos do Panel Schedule e eletrodutos no 3D",
+      "Conferência de disjuntores multipolares",
+      "Reservas futuras para expansão de obra"
+    ],
+    "quiz": [
+      {
+        "id": "2.11-q1",
+        "enunciado": "Qual equipamento da sala elétrica concentra os circuitos listados no Panel Schedule principal e exige identificação física na porta?",
+        "contexto_normativo": "NEC 408.4 · Circuit Directory",
+        "alternativas": [
+          {
+            "id": "a",
+            "texto": "Painel_QGBT",
+            "correta": true,
+            "objeto_alvo": "Painel_QGBT",
+            "camera_foco": [0.85, 1.65, 1.8],
+            "alvo_lookat": [-1.8, 1.25, -1.6],
+            "rotulo": "Painel_QGBT · Diretório de Circuitos",
+            "feedback": "Correto! Todo Panel Schedule publicado na prancha deve estar vinculado exatamente ao painel correspondente no modelo BIM (TAG e parâmetros)."
+          },
+          {
+            "id": "b",
+            "texto": "Hanger_01",
+            "correta": false,
+            "objeto_alvo": "Hanger_01",
+            "camera_foco": [1.9, 2.3, 1.7],
+            "alvo_lookat": [0.2, 2.15, -0.35],
+            "rotulo": "Hanger_01",
+            "feedback": "Incorreto. O Hanger_01 é apenas o suporte de eletrodutos."
+          },
+          {
+            "id": "c",
+            "texto": "Duct_HVAC",
+            "correta": false,
+            "objeto_alvo": "Duct_HVAC",
+            "camera_foco": [2.2, 2.8, 1.8],
+            "alvo_lookat": [0.4, 2.65, -0.4],
+            "rotulo": "Duct_HVAC",
+            "feedback": "Incorreto. O duto HVAC pertence à mecânica."
+          }
+        ]
+      }
+    ],
+    "atividadePratica": {
+      "ativa": false,
+      "titulo": "Auditoria de Panel Schedule",
+      "instrucoes": "Opcional: envie PDF de um Panel Schedule exportado do Revit.",
+      "entregavel": "Imagem ou PDF"
+    }
+  },
+  {
+    "id": "2.12",
+    "codigo": "2.12",
+    "titulo": "2.12 Circuit grouping",
+    "ilhaId": "ilha-1",
+    "ilhaNome": "Conceitos Elétricos",
+    "duracaoSegundos": 57,
+    "videoResumo": "Agrupamento inteligente de circuitos (Home Runs) em Shared Neutrals vs Neutros Dedicados para otimizar a quantidade de eletrodutos no teto.",
+    "videoTopicos": [
+      "Limite prático de 3 circuitos por home run (máx 6 a 9 condutores)",
+      "Identificação de fases A, B, C com cores padronizadas",
+      "Redução de congestionamento nos corredores"
+    ],
+    "quiz": [
+      {
+        "id": "2.12-q1",
+        "enunciado": "Ao agrupar 3 circuitos monofásicos com neutros dedicados (6 condutores portadores + 1 terra) em um único home run, qual eletroduto garante melhor margem construtiva?",
+        "contexto_normativo": "NEC 310.15(C)(1) · Derating & Fill",
+        "alternativas": [
+          {
+            "id": "a",
+            "texto": "Conduit_075_ThreeQuarter",
+            "correta": true,
+            "objeto_alvo": "Conduit_075_ThreeQuarter",
+            "camera_foco": [1.8, 2.35, 1.4],
+            "alvo_lookat": [0.3, 2.15, -0.7],
+            "rotulo": "Conduit_075_ThreeQuarter · Home Run Agrupado",
+            "feedback": "Correto! 7 condutores #12/#10 cabem com folga no EMT 3/4\", evitando excesso de eletrodutos paralelos e mantendo produtividade na instalação."
+          },
+          {
+            "id": "b",
+            "texto": "Conduit_05_HalfInch",
+            "correta": false,
+            "objeto_alvo": "Conduit_05_HalfInch",
+            "camera_foco": [1.5, 2.3, 1.2],
+            "alvo_lookat": [0.1, 2.15, -1.0],
+            "rotulo": "Conduit_05_HalfInch · Limite Apertado",
+            "feedback": "Incorreto. Em 1/2\", 7 condutores #10 já excedem o limite de 40% e dificultam o puxamento em curvas."
+          },
+          {
+            "id": "c",
+            "texto": "Pipe_Conflito_Frontal",
+            "correta": false,
+            "objeto_alvo": "Pipe_Conflito_Frontal",
+            "camera_foco": [0.4, 1.8, 1.5],
+            "alvo_lookat": [-1.55, 1.6, -0.75],
+            "rotulo": "Pipe_Conflito_Frontal",
+            "feedback": "Incorreto. Essa tubulação é um elemento interferente de outra disciplina."
+          }
+        ]
+      }
+    ],
+    "atividadePratica": {
+      "ativa": false,
+      "titulo": "Mapa de Home Runs",
+      "instrucoes": "Opcional: envie diagrama mostrando o agrupamento dos circuitos.",
+      "entregavel": "Imagem ou PDF"
+    }
+  },
+  {
+    "id": "2.13",
+    "codigo": "2.13",
+    "titulo": "2.13 Instalation scope",
+    "ilhaId": "ilha-1",
+    "ilhaNome": "Conceitos Elétricos",
+    "duracaoSegundos": 55,
+    "videoResumo": "Definição clara do escopo de instalação (Installation Scope): o que é responsabilidade da empreiteira elétrica vs mecânica/automação no Shop Drawing.",
+    "videoTopicos": [
+      "Matriz de responsabilidades (RACI) entre Electrical, HVAC e Plumbing",
+      "Identificação de pontos de energia para equipamentos mecânicos",
+      "Notas de exclusão e limites de fornecimento em prancha"
+    ],
+    "quiz": [
+      {
+        "id": "2.13-q1",
+        "enunciado": "Na coordenação de escopo dentro da sala técnica, qual elemento pertence à disciplina de Mecânica/Climatização e NÃO faz parte do fornecimento elétrico (exceto seu ponto de força)?",
+        "contexto_normativo": "VDC Scope Matrix · MEP",
+        "alternativas": [
+          {
+            "id": "a",
+            "texto": "Duto Retangular Aéreo (Duct_HVAC)",
+            "correta": true,
+            "objeto_alvo": "Duct_HVAC",
+            "camera_foco": [2.2, 2.8, 1.8],
+            "alvo_lookat": [0.4, 2.65, -0.4],
+            "rotulo": "Duct_HVAC · Escopo Mecânico",
+            "feedback": "Correto! O duto HVAC é fornecido e montado pela equipe de climatização. O modelo elétrico recebe-o via link IFC/RVT para coordenação de folgas."
+          },
+          {
+            "id": "b",
+            "texto": "Painel Principal (Painel_QGBT)",
+            "correta": false,
+            "objeto_alvo": "Painel_QGBT",
+            "camera_foco": [0.85, 1.65, 1.8],
+            "alvo_lookat": [-1.8, 1.25, -1.6],
+            "rotulo": "Painel_QGBT · Escopo Elétrico",
+            "feedback": "Incorreto. O QGBT é o coração do escopo elétrico."
+          },
+          {
+            "id": "c",
+            "texto": "Eletroduto 1/2\" (Conduit_05_HalfInch)",
+            "correta": false,
+            "objeto_alvo": "Conduit_05_HalfInch",
+            "camera_foco": [1.5, 2.3, 1.2],
+            "alvo_lookat": [0.1, 2.15, -1.0],
+            "rotulo": "Conduit_05_HalfInch · Escopo Elétrico",
+            "feedback": "Incorreto. Eletrodutos EMT fazem parte do escopo direto da elétrica."
+          }
+        ]
+      }
+    ],
+    "atividadePratica": {
+      "ativa": false,
+      "titulo": "Matriz de Escopo",
+      "instrucoes": "Opcional: envie tabela de limites de escopo MEP.",
+      "entregavel": "Imagem ou PDF"
+    }
+  },
+  {
+    "id": "3.1",
+    "codigo": "3.1",
+    "titulo": "3.1 Main Ribbon",
+    "ilhaId": "ilha-2",
+    "ilhaNome": "Revit & Families",
+    "duracaoSegundos": 50,
+    "videoResumo": "Navegação rápida na faixa de opções (Main Ribbon) do Revit voltada ao fluxo Electrical: Systems, Modify, Annotate e Collaborate.",
+    "videoTopicos": [
+      "Atalhos essenciais: CN (Conduit), EE (Electrical Equipment), AL (Align)",
+      "Configuração de Worksets para equipe VDC",
+      "Acesso rápido a Interference Check"
+    ],
+    "quiz": [
+      {
+        "id": "3.1-q1",
+        "enunciado": "Usando a aba Systems -> Electrical -> Conduit (atalho CN), qual tipo de objeto modelamos ao traçar a infraestrutura de 3/4\" no teto?",
+        "contexto_normativo": "Revit MEP · Systems Ribbon",
+        "alternativas": [
+          {
+            "id": "a",
+            "texto": "Conduit_075_ThreeQuarter",
+            "correta": true,
+            "objeto_alvo": "Conduit_075_ThreeQuarter",
+            "camera_foco": [1.8, 2.35, 1.4],
+            "alvo_lookat": [0.3, 2.15, -0.7],
+            "rotulo": "Conduit_075_ThreeQuarter · Comando CN",
+            "feedback": "Correto! O comando Conduit (CN) cria trechos contínuos de eletroduto com conexões automáticas (bends/couplings)."
+          },
+          {
+            "id": "b",
+            "texto": "Duct_HVAC",
+            "correta": false,
+            "objeto_alvo": "Duct_HVAC",
+            "camera_foco": [2.2, 2.8, 1.8],
+            "alvo_lookat": [0.4, 2.65, -0.4],
+            "rotulo": "Duct_HVAC · Comando DT",
+            "feedback": "Incorreto. Dutos são modelados com o comando Duct (DT) na seção HVAC."
+          },
+          {
+            "id": "c",
+            "texto": "Pipe_Conflito_Frontal",
+            "correta": false,
+            "objeto_alvo": "Pipe_Conflito_Frontal",
+            "camera_foco": [0.4, 1.8, 1.5],
+            "alvo_lookat": [-1.55, 1.6, -0.75],
+            "rotulo": "Pipe_Conflito_Frontal · Comando PI",
+            "feedback": "Incorreto. Tubulações hidráulicas usam o comando Pipe (PI)."
+          }
+        ]
+      }
+    ],
+    "atividadePratica": {
+      "ativa": false,
+      "titulo": "Customização de Atalhos",
+      "instrucoes": "Opcional: envie arquivo ou print de atalhos configurados.",
+      "entregavel": "Imagem ou PDF"
+    }
+  },
+  {
+    "id": "3.2",
+    "codigo": "3.2",
+    "titulo": "3.2 Project Browser",
+    "ilhaId": "ilha-2",
+    "ilhaNome": "Revit & Families",
+    "duracaoSegundos": 52,
+    "videoResumo": "Organização do Project Browser para Shop Drawings: separação entre Working Views (modelagem/clash) e Sheet Views (pranchas plotáveis).",
+    "videoTopicos": [
+      "Estrutura por pavimento e subdisciplina (Power, Lighting, Fire Alarm)",
+      "Vistas 3D de seção por sala elétrica",
+      "Padronização de nomenclatura de pranchas"
+    ],
+    "quiz": [
+      {
+        "id": "3.2-q1",
+        "enunciado": "Ao isolar uma '3D Working View' específica para revisar a Sala Elétrica no Project Browser, qual conjunto de equipamentos é o alvo principal dessa vista?",
+        "contexto_normativo": "Revit · View Organization",
+        "alternativas": [
+          {
+            "id": "a",
+            "texto": "Painel_QGBT e sua chegada de eletrodutos",
+            "correta": true,
+            "objeto_alvo": "Painel_QGBT",
+            "camera_foco": [1.5, 2.1, 2.3],
+            "alvo_lookat": [-1.4, 1.4, -1.2],
+            "rotulo": "Vista 3D · Sala Elétrica",
+            "feedback": "Correto! Ter vistas 3D dedicadas à sala elétrica no Project Browser acelera a conferência de alinhamentos e colisões."
+          },
+          {
+            "id": "b",
+            "texto": "Apenas o Duto HVAC isolado (Duct_HVAC)",
+            "correta": false,
+            "objeto_alvo": "Duct_HVAC",
+            "camera_foco": [2.2, 2.8, 1.8],
+            "alvo_lookat": [0.4, 2.65, -0.4],
+            "rotulo": "Duct_HVAC",
+            "feedback": "Incorreto. O duto aparece como link de referência para coordenação, não como foco isolado do modelo elétrico."
+          },
+          {
+            "id": "c",
+            "texto": "Somente o suporte Hanger_01 sem eletrodutos",
+            "correta": false,
+            "objeto_alvo": "Hanger_01",
+            "camera_foco": [1.9, 2.3, 1.7],
+            "alvo_lookat": [0.2, 2.15, -0.35],
+            "rotulo": "Hanger_01",
+            "feedback": "Incorreto. Os suportes devem ser visualizados sempre em conjunto com os eletrodutos que sustentam."
+          }
+        ]
+      }
+    ],
+    "atividadePratica": {
+      "ativa": false,
+      "titulo": "Árvore do Project Browser",
+      "instrucoes": "Opcional: envie print da organização de pastas no Revit.",
+      "entregavel": "Imagem ou PDF"
+    }
+  },
+  {
+    "id": "3.3",
+    "codigo": "3.3",
+    "titulo": "3.3 Properties",
+    "ilhaId": "ilha-2",
+    "ilhaNome": "Revit & Families",
+    "duracaoSegundos": 54,
+    "videoResumo": "Paleta Properties: controle preciso de Elevation (Middle/Top/Bottom), Offset, Service Type e parâmetros de fabricação.",
+    "videoTopicos": [
+      "Bottom Elevation vs Middle Elevation em racks de eletroduto",
+      "Service Type para filtragem automática de cores",
+      "Type Properties vs Instance Properties"
+    ],
+    "quiz": [
+      {
+        "id": "3.3-q1",
+        "enunciado": "Para garantir que dois eletrodutos paralelos de diâmetros diferentes apoiem perfeitamente sobre a face superior do perfilado, qual parâmetro na paleta Properties deve ser igualado?",
+        "contexto_normativo": "Revit MEP · Bottom Elevation",
+        "alternativas": [
+          {
+            "id": "a",
+            "texto": "Bottom Elevation (face inferior apoiada no Hanger_01)",
+            "correta": true,
+            "objeto_alvo": "Hanger_01",
+            "camera_foco": [1.75, 2.22, 1.35],
+            "alvo_lookat": [0.2, 2.12, -0.35],
+            "rotulo": "Bottom Elevation · Alinhamento no Rack",
+            "feedback": "Exato! Quando igualamos a elevação pela face inferior (Bottom Elevation), eletrodutos de 1/2\" e 3/4\" repousam nivelados sobre o mesmo perfilado Unistrut."
+          },
+          {
+            "id": "b",
+            "texto": "Centerline Elevation no Duct_HVAC",
+            "correta": false,
+            "objeto_alvo": "Duct_HVAC",
+            "camera_foco": [2.2, 2.8, 1.8],
+            "alvo_lookat": [0.4, 2.65, -0.4],
+            "rotulo": "Duct_HVAC",
+            "feedback": "Incorreto. Igualar linha de centro entre diâmetros distintos faz com que um tubo atravesse ou flutue sobre o suporte."
+          },
+          {
+            "id": "c",
+            "texto": "Offset do Painel_QGBT",
+            "correta": false,
+            "objeto_alvo": "Painel_QGBT",
+            "camera_foco": [0.9, 1.7, 2.0],
+            "alvo_lookat": [-1.8, 1.25, -1.6],
+            "rotulo": "Painel_QGBT",
+            "feedback": "Incorreto. A elevação do painel é definida pela cota de montagem na parede/piso, não pela altura do rack."
+          }
+        ]
+      }
+    ],
+    "atividadePratica": {
+      "ativa": false,
+      "titulo": "Conferência de Bottom Elevation",
+      "instrucoes": "Opcional: envie corte mostrando eletrodutos alinhados pela base.",
+      "entregavel": "Imagem ou PDF"
+    }
+  },
+  {
+    "id": "3.4",
+    "codigo": "3.4",
+    "titulo": "3.4 Visibility Graphics",
+    "ilhaId": "ilha-2",
+    "ilhaNome": "Revit & Families",
+    "duracaoSegundos": 55,
+    "videoResumo": "Controle de Visibility/Graphics (VG / VV) e View Templates para destacar sistemas elétricos em Shop Drawings sobre links arquitetônicos suaves (Halftone).",
+    "videoTopicos": [
+      "Aplicando Halftone/Underlay nos links de Arquitetura e Estrutura",
+      "Ativando/ocultando subcategorias de Electrical Fixtures e Conduits",
+      "Uso disciplinado de View Templates"
+    ],
+    "quiz": [
+      {
+        "id": "3.4-q1",
+        "enunciado": "Em uma prancha de coordenação usando Visibility Graphics, qual elemento de outra disciplina deve permanecer visível (porém em meio-tom/cor contrastante) para evitar colisões aéreas?",
+        "contexto_normativo": "Revit · VG Overrides & Revit Links",
+        "alternativas": [
+          {
+            "id": "a",
+            "texto": "Duct_HVAC (link mecânico visível para referência)",
+            "correta": true,
+            "objeto_alvo": "Duct_HVAC",
+            "camera_foco": [2.2, 2.8, 1.8],
+            "alvo_lookat": [0.4, 2.65, -0.4],
+            "rotulo": "Duct_HVAC · Referência Coordenada",
+            "feedback": "Correto! Manter dutos e tubulações de links visíveis em cores distintas ou Halftone previne que o modelador trace eletrodutos colidindo com o HVAC."
+          },
+          {
+            "id": "b",
+            "texto": "Ocultar todos os elementos e deixar só Conduit_05_HalfInch",
+            "correta": false,
+            "objeto_alvo": "Conduit_05_HalfInch",
+            "camera_foco": [1.5, 2.3, 1.2],
+            "alvo_lookat": [0.1, 2.15, -1.0],
+            "rotulo": "Conduit_05_HalfInch",
+            "feedback": "Incorreto. Trabalhar 'cego' sem os links visíveis na vista de trabalho gera dezenas de clashes em campo."
+          },
+          {
+            "id": "c",
+            "texto": "Ocultar o Painel_QGBT da vista elétrica",
+            "correta": false,
+            "objeto_alvo": "Painel_QGBT",
+            "camera_foco": [0.85, 1.65, 1.8],
+            "alvo_lookat": [-1.8, 1.25, -1.6],
+            "rotulo": "Painel_QGBT",
+            "feedback": "Incorreto. O painel é elemento nativo principal da vista elétrica e nunca deve ser ocultado em Shop Drawings."
+          }
+        ]
+      }
+    ],
+    "atividadePratica": {
+      "ativa": false,
+      "titulo": "Template de Vista VG",
+      "instrucoes": "Opcional: envie print de planta com links em Halftone e elétrica destacada.",
+      "entregavel": "Imagem ou PDF"
+    }
+  },
+  {
+    "id": "3.5",
+    "codigo": "3.5",
+    "titulo": "3.5 Filters",
+    "ilhaId": "ilha-2",
+    "ilhaNome": "Revit & Families",
+    "duracaoSegundos": 58,
+    "videoResumo": "Filtros baseados em regras no Revit para colorir automaticamente eletrodutos por sistema (Normal, Emergência, Dados, Incêndio) e destacar desvios.",
+    "videoTopicos": [
+      "Criando regras por Service Type ou Comments",
+      "Padronização de cores para revisão rápida de VDC",
+      "Aplicação de filtros em múltiplas vistas via View Template"
+    ],
+    "quiz": [
+      {
+        "id": "3.5-q1",
+        "enunciado": "Se criarmos um Filter para destacar automaticamente em vermelho qualquer tubulação hidráulica ou de incêndio que invada a zona de trabalho elétrica, qual peça será colorida na cena?",
+        "contexto_normativo": "Revit · Rule-Based View Filters",
+        "alternativas": [
+          {
+            "id": "a",
+            "texto": "Pipe_Conflito_Frontal",
+            "correta": true,
+            "objeto_alvo": "Pipe_Conflito_Frontal",
+            "camera_foco": [0.4, 1.8, 1.5],
+            "alvo_lookat": [-1.55, 1.6, -0.75],
+            "rotulo": "Pipe_Conflito_Frontal · Filtro de Alerta",
+            "feedback": "Correto! Filtros visuais aceleram a auditoria imediata de tubulações estranhas ao sistema elétrico."
+          },
+          {
+            "id": "b",
+            "texto": "Conduit_05_HalfInch",
+            "correta": false,
+            "objeto_alvo": "Conduit_05_HalfInch",
+            "camera_foco": [1.5, 2.3, 1.2],
+            "alvo_lookat": [0.1, 2.15, -1.0],
+            "rotulo": "Conduit_05_HalfInch",
+            "feedback": "Incorreto. O Conduit_05 é um eletroduto elétrico válido na cota aérea."
+          },
+          {
+            "id": "c",
+            "texto": "Painel_QGBT",
+            "correta": false,
+            "objeto_alvo": "Painel_QGBT",
+            "camera_foco": [0.85, 1.65, 1.8],
+            "alvo_lookat": [-1.8, 1.25, -1.6],
+            "rotulo": "Painel_QGBT",
+            "feedback": "Incorreto. O QGBT pertence à categoria Electrical Equipment."
+          }
+        ]
+      }
+    ],
+    "atividadePratica": {
+      "ativa": false,
+      "titulo": "Esquema de Cores por Filtro",
+      "instrucoes": "Opcional: envie print da legenda de cores de sistemas elétricos.",
+      "entregavel": "Imagem ou PDF"
+    }
+  },
+  {
+    "id": "3.6",
+    "codigo": "3.6",
+    "titulo": "3.6 Schedule",
+    "ilhaId": "ilha-2",
+    "ilhaNome": "Revit & Families",
+    "duracaoSegundos": 56,
+    "videoResumo": "Tabelas quantitativas (Schedules) automáticas para levantamento de materiais (BOM): metros lineares de EMT por diâmetro, quantidade de hangers e painéis.",
+    "videoTopicos": [
+      "Conduit Schedule agrupada por Diameter e Service Type",
+      "Adicionando fator de perda de 10% com Calculated Value",
+      "Auditoria de dados faltantes diretamente na tabela"
+    ],
+    "quiz": [
+      {
+        "id": "3.6-q1",
+        "enunciado": "Ao gerar uma Conduit Schedule agrupada por diâmetro, quais dois elementos da cena serão contabilizados em metros lineares separados?",
+        "contexto_normativo": "Revit · Material Takeoff / Conduit Schedule",
+        "alternativas": [
+          {
+            "id": "a",
+            "texto": "Conduit_05_HalfInch e Conduit_075_ThreeQuarter",
+            "correta": true,
+            "objeto_alvo": "Conduit_075_ThreeQuarter",
+            "camera_foco": [1.8, 2.4, 1.5],
+            "alvo_lookat": [0.2, 2.15, -0.85],
+            "rotulo": "Conduítes 1/2\" & 3/4\" · Quantitativo EMT",
+            "feedback": "Exato! A Schedule de eletrodutos agrupa por bitola nominal (1/2\" e 3/4\") e soma os comprimentos exatos para compra e pré-fabricação."
+          },
+          {
+            "id": "b",
+            "texto": "Duct_HVAC e Pipe_Conflito_Frontal",
+            "correta": false,
+            "objeto_alvo": "Duct_HVAC",
+            "camera_foco": [2.2, 2.8, 1.8],
+            "alvo_lookat": [0.4, 2.65, -0.4],
+            "rotulo": "Categorias Mecânicas",
+            "feedback": "Incorreto. Dutos e tubulações hidráulicas não entram em uma Conduit Schedule."
+          },
+          {
+            "id": "c",
+            "texto": "Somente o Painel_QGBT",
+            "correta": false,
+            "objeto_alvo": "Painel_QGBT",
+            "camera_foco": [0.85, 1.65, 1.8],
+            "alvo_lookat": [-1.8, 1.25, -1.6],
+            "rotulo": "Painel_QGBT",
+            "feedback": "Incorreto. Painéis são contabilizados em Electrical Equipment Schedules."
+          }
+        ]
+      }
+    ],
+    "atividadePratica": {
+      "ativa": false,
+      "titulo": "Conduit Schedule",
+      "instrucoes": "Opcional: envie print da tabela quantitativa de eletrodutos.",
+      "entregavel": "Imagem ou PDF"
+    }
+  },
+  {
+    "id": "3.7",
+    "codigo": "3.7",
+    "titulo": "3.7 Conduits",
+    "ilhaId": "ilha-2",
+    "ilhaNome": "Revit & Families",
+    "duracaoSegundos": 64,
+    "videoResumo": "Técnicas avançadas de roteamento de eletrodutos no Revit: Parallel Conduits, offset horizontal/vertical e uso correto de Conduit with Fittings vs Without Fittings.",
+    "videoTopicos": [
+      "Parallel Conduits com espaçamento construtivo real para conectores",
+      "Modelagem de offsets de 30° e 45° para desvio de vigas",
+      "Uso de Conduit Runs para identificação de trechos"
+    ],
+    "quiz": [
+      {
+        "id": "3.7-q1",
+        "enunciado": "Para modelar os dois eletrodutos paralelos apoiados sobre o mesmo suporte trapeze mantendo distância mínima para porcas e abraçadeiras (strut clamps), qual comando otimiza o lançamento?",
+        "contexto_normativo": "Revit MEP · Parallel Conduits",
+        "alternativas": [
+          {
+            "id": "a",
+            "texto": "Parallel Conduits alinhado ao Conduit_05_HalfInch e Conduit_075_ThreeQuarter",
+            "correta": true,
+            "objeto_alvo": "Conduit_05_HalfInch",
+            "camera_foco": [1.6, 2.35, 1.3],
+            "alvo_lookat": [0.2, 2.15, -0.85],
+            "rotulo": "Parallel Conduits · Espaçamento Real",
+            "feedback": "Correto! O comando Parallel Conduits permite replicar rapidamente caminhos respeitando a folga lateral para abraçadeiras no Unistrut."
+          },
+          {
+            "id": "b",
+            "texto": "Copiar o Painel_QGBT ao longo do corredor",
+            "correta": false,
+            "objeto_alvo": "Painel_QGBT",
+            "camera_foco": [0.85, 1.65, 1.8],
+            "alvo_lookat": [-1.8, 1.25, -1.6],
+            "rotulo": "Painel_QGBT",
+            "feedback": "Incorreto. Painéis não são replicados com o comando Parallel Conduits."
+          },
+          {
+            "id": "c",
+            "texto": "Modelar sobreposto dentro do Duct_HVAC",
+            "correta": false,
+            "objeto_alvo": "Duct_HVAC",
+            "camera_foco": [2.2, 2.8, 1.8],
+            "alvo_lookat": [0.4, 2.65, -0.4],
+            "rotulo": "Duct_HVAC",
+            "feedback": "Incorreto. Eletrodutos paralelos devem desviar dos dutos HVAC."
+          }
+        ]
+      }
+    ],
+    "atividadePratica": {
+      "ativa": false,
+      "titulo": "Rack com Parallel Conduits",
+      "instrucoes": "Opcional: envie print de um rack com 4 eletrodutos paralelos.",
+      "entregavel": "Imagem ou PDF"
+    }
+  },
+  {
+    "id": "4.1",
+    "codigo": "4.1",
+    "titulo": "4.1 Systems",
+    "ilhaId": "ilha-2",
+    "ilhaNome": "Revit & Families",
+    "duracaoSegundos": 53,
+    "videoResumo": "Famílias de Sistema (System Families) no Revit: Conduit Types, Bend Tables e configurações de Conduit Settings para refletir raios reais de dobra em obra.",
+    "videoTopicos": [
+      "Configurando Bending Radius conforme fabricante (Greenlee/NEC)",
+      "Diferença entre System Families e Loadable Families",
+      "Duplicação segura de tipos de eletroduto"
+    ],
+    "quiz": [
+      {
+        "id": "4.1-q1",
+        "enunciado": "Qual elemento da sala elétrica é instanciado no Revit utilizando uma System Family (Família de Sistema) nativa que não precisa ser carregada como arquivo .RFA externo?",
+        "contexto_normativo": "Revit Architecture · System Families",
+        "alternativas": [
+          {
+            "id": "a",
+            "texto": "Conduit_075_ThreeQuarter (Eletroduto EMT)",
+            "correta": true,
+            "objeto_alvo": "Conduit_075_ThreeQuarter",
+            "camera_foco": [1.8, 2.35, 1.4],
+            "alvo_lookat": [0.3, 2.15, -0.7],
+            "rotulo": "Conduit_075_ThreeQuarter · System Family",
+            "feedback": "Correto! Conduits (assim como paredes, pisos e dutos) são System Families integradas ao projeto, enquanto apenas seus fittings são Loadable Families."
+          },
+          {
+            "id": "b",
+            "texto": "Painel_QGBT (Equipamento de fabricante)",
+            "correta": false,
+            "objeto_alvo": "Painel_QGBT",
+            "camera_foco": [0.85, 1.65, 1.8],
+            "alvo_lookat": [-1.8, 1.25, -1.6],
+            "rotulo": "Painel_QGBT · Loadable Family (.RFA)",
+            "feedback": "Incorreto. Painéis elétricos são Loadable Families criadas externamente em arquivos .RFA."
+          },
+          {
+            "id": "c",
+            "texto": "Hanger_01 (Família de Suporte)",
+            "correta": false,
+            "objeto_alvo": "Hanger_01",
+            "camera_foco": [1.9, 2.3, 1.7],
+            "alvo_lookat": [0.2, 2.15, -0.35],
+            "rotulo": "Hanger_01 · Loadable Family (.RFA)",
+            "feedback": "Incorreto. Suportes Unistrut são Loadable Families carregadas no projeto."
+          }
+        ]
+      }
+    ],
+    "atividadePratica": {
+      "ativa": false,
+      "titulo": "Configuração de Conduit Settings",
+      "instrucoes": "Opcional: envie print da tabela de Bending Radius no Revit.",
+      "entregavel": "Imagem ou PDF"
+    }
+  },
+  {
+    "id": "4.2",
+    "codigo": "4.2",
+    "titulo": "4.2 Loadable",
+    "ilhaId": "ilha-2",
+    "ilhaNome": "Revit & Families",
+    "duracaoSegundos": 59,
+    "videoResumo": "Famílias Carregáveis (.RFA): modelagem limpa com planos de referência, conectores elétricos (Electrical Connectors) e volume de espaço livre embutido (Clearance Box).",
+    "videoTopicos": [
+      "Criando Clearance Zone paramétrica visível em planta e 3D",
+      "Inserindo Electrical Connectors com tensão e fases corretas",
+      "Otimização de geometria para não pesar o modelo"
+    ],
+    "quiz": [
+      {
+        "id": "4.2-q1",
+        "enunciado": "Qual componente da sala deve possuir uma subcategoria de 'Clearance Zone' (Zona de Acesso) embutida dentro da sua família carregável (.RFA) para acusar interferências automaticamente?",
+        "contexto_normativo": "BIM Families · Embedded Clearance",
+        "alternativas": [
+          {
+            "id": "a",
+            "texto": "Painel_QGBT",
+            "correta": true,
+            "objeto_alvo": "Painel_QGBT",
+            "camera_foco": [0.95, 1.75, 2.1],
+            "alvo_lookat": [-1.8, 1.15, -1.5],
+            "rotulo": "Painel_QGBT · Família com Clearance Box",
+            "feedback": "Perfeito! Embutir o volume de clearance na família do painel permite que ferramentas de Clash Detection detectem imediatamente objetos como o Pipe_Conflito_Frontal."
+          },
+          {
+            "id": "b",
+            "texto": "Conduit_05_HalfInch",
+            "correta": false,
+            "objeto_alvo": "Conduit_05_HalfInch",
+            "camera_foco": [1.5, 2.3, 1.2],
+            "alvo_lookat": [0.1, 2.15, -1.0],
+            "rotulo": "Conduit_05_HalfInch",
+            "feedback": "Incorreto. Eletrodutos são famílias de sistema e não carregam volumes de clearance de manutenção frontal."
+          },
+          {
+            "id": "c",
+            "texto": "Duct_HVAC",
+            "correta": false,
+            "objeto_alvo": "Duct_HVAC",
+            "camera_foco": [2.2, 2.8, 1.8],
+            "alvo_lookat": [0.4, 2.65, -0.4],
+            "rotulo": "Duct_HVAC",
+            "feedback": "Incorreto. Embora dutos tenham acesso para dampers, o foco elétrico aqui é o painel."
+          }
+        ]
+      }
+    ],
+    "atividadePratica": {
+      "ativa": false,
+      "titulo": "Família de Painel com Clearance",
+      "instrucoes": "Opcional: envie print do Family Editor mostrando a caixa de folga.",
+      "entregavel": "Imagem ou PDF"
+    }
+  },
+  {
+    "id": "5.1",
+    "codigo": "5.1",
+    "titulo": "5.1 Painel",
+    "ilhaId": "ilha-3",
+    "ilhaNome": "Modelagem Construtiva",
+    "duracaoSegundos": 58,
+    "videoResumo": "Posicionamento construtivo de painéis em parede de alvenaria ou drywall: altura ergonômica do disjuntor mais alto (máx. 2,00m) e fixação em montantes.",
+    "videoTopicos": [
+      "Regra NEC 404.8: centro da alavanca mais alta <= 2,00m (6'7\")",
+      "Afastamento de quinas para abertura total da porta a 90°",
+      "Uso de perfilados de fundo (backing strut)"
+    ],
+    "quiz": [
+      {
+        "id": "5.1-q1",
+        "enunciado": "Na montagem construtiva do Painel_QGBT na parede, qual erro espacial compromete tanto a abertura da porta quanto a segurança do eletricista?",
+        "contexto_normativo": "NEC 110.26(A)(2) · Abertura de Portas >= 90°",
+        "alternativas": [
+          {
+            "id": "a",
+            "texto": "Manter o Pipe_Conflito_Frontal na frente das portas do painel",
+            "correta": true,
+            "objeto_alvo": "Pipe_Conflito_Frontal",
+            "camera_foco": [0.4, 1.75, 1.45],
+            "alvo_lookat": [-1.55, 1.6, -0.75],
+            "rotulo": "Pipe_Conflito_Frontal · Impede Abertura 90°",
+            "feedback": "Correto! Qualquer elemento à frente do painel dentro do espaço de trabalho impede a abertura segura das portas a 90° e viola a norma."
+          },
+          {
+            "id": "b",
+            "texto": "Ancorar o Hanger_01 na laje superior",
+            "correta": false,
+            "objeto_alvo": "Hanger_01",
+            "camera_foco": [1.9, 2.3, 1.7],
+            "alvo_lookat": [0.2, 2.15, -0.35],
+            "rotulo": "Hanger_01 · Fixação Normal",
+            "feedback": "Incorreto. A fixação de suportes na laje acima da cota de trabalho é prática padrão."
+          },
+          {
+            "id": "c",
+            "texto": "Chegar com Conduit_075_ThreeQuarter pelo topo do painel",
+            "correta": false,
+            "objeto_alvo": "Conduit_075_ThreeQuarter",
+            "camera_foco": [1.8, 2.35, 1.4],
+            "alvo_lookat": [0.3, 2.15, -0.7],
+            "rotulo": "Conduit_075_ThreeQuarter · Chegada Superior",
+            "feedback": "Incorreto. A chegada pelo topo (top entry) é perfeitamente válida em salas elétricas secas."
+          }
+        ]
+      }
+    ],
+    "atividadePratica": {
+      "ativa": false,
+      "titulo": "Elevação de Montagem do Painel",
+      "instrucoes": "Opcional: envie vista de elevação cotada do painel.",
+      "entregavel": "Imagem ou PDF"
+    }
+  },
+  {
+    "id": "5.2",
+    "codigo": "5.2",
+    "titulo": "5.2 Electrical Room",
+    "ilhaId": "ilha-3",
+    "ilhaNome": "Modelagem Construtiva",
+    "duracaoSegundos": 62,
+    "videoResumo": "Layout completo da Sala Elétrica: planejamento de rotas de saída, pé-direito útil, iluminação de emergência e proteção contra vazamentos.",
+    "videoTopicos": [
+      "Proibição de tubulações hidráulicas sobre painéis (Foreign Systems)",
+      "Rotas de fuga desobstruídas com largura mínima",
+      "Coordenação de racks múltiplos na entrada da sala"
+    ],
+    "quiz": [
+      {
+        "id": "5.2-q1",
+        "enunciado": "Qual elemento presente nesta Sala Elétrica configura violação direta da regra de 'Foreign Systems' (sistemas estranhos não podem invadir o espaço dedicado ou frontal do equipamento elétrico)?",
+        "contexto_normativo": "NEC 110.26(E) · Dedicated Equipment Space",
+        "alternativas": [
+          {
+            "id": "a",
+            "texto": "Pipe_Conflito_Frontal",
+            "correta": true,
+            "objeto_alvo": "Pipe_Conflito_Frontal",
+            "camera_foco": [0.35, 1.75, 1.45],
+            "alvo_lookat": [-1.55, 1.6, -0.75],
+            "rotulo": "Pipe_Conflito_Frontal · Foreign System",
+            "feedback": "Exato! Tubulações de água, esgoto ou combate a incêndio que não atendem exclusivamente à sala elétrica não podem cruzar o espaço dedicado frontal/superior do quadro."
+          },
+          {
+            "id": "b",
+            "texto": "Conduit_05_HalfInch",
+            "correta": false,
+            "objeto_alvo": "Conduit_05_HalfInch",
+            "camera_foco": [1.5, 2.3, 1.2],
+            "alvo_lookat": [0.1, 2.15, -1.0],
+            "rotulo": "Conduit_05_HalfInch · Sistema Elétrico",
+            "feedback": "Incorreto. O eletroduto pertence à própria instalação elétrica."
+          },
+          {
+            "id": "c",
+            "texto": "Hanger_01",
+            "correta": false,
+            "objeto_alvo": "Hanger_01",
+            "camera_foco": [1.9, 2.3, 1.7],
+            "alvo_lookat": [0.2, 2.15, -0.35],
+            "rotulo": "Hanger_01 · Suporte Elétrico",
+            "feedback": "Incorreto. O suporte Unistrut é parte integrante da infraestrutura elétrica."
+          }
+        ]
+      }
+    ],
+    "atividadePratica": {
+      "ativa": false,
+      "titulo": "Planta Baixa da Sala Elétrica",
+      "instrucoes": "Opcional: envie planta cotada de layout de uma sala elétrica.",
+      "entregavel": "Imagem ou PDF"
+    }
+  },
+  {
+    "id": "5.3",
+    "codigo": "5.3",
+    "titulo": "5.3 Hangers",
+    "ilhaId": "ilha-3",
+    "ilhaNome": "Modelagem Construtiva",
+    "duracaoSegundos": 76,
+    "videoResumo": "Suportação construtiva de eletrodutos (Trapeze Hangers): perfilados Unistrut, barras roscadas (Threaded Rods), espaçamento máximo pela NEC e cálculo de carga.",
+    "videoTopicos": [
+      "NEC 358.30: espaçamento máximo de 3m (10 ft) para EMT e 0,9m de cada caixa/curva",
+      "Componentes de um Trapeze: Chumbador, Barra Roscada 3/8\", Perfilado 41x41mm e Strut Clamps",
+      "Previsão de 25% de largura extra no perfilado para futuros eletrodutos"
+    ],
+    "quiz": [
+      {
+        "id": "5.3-q1",
+        "enunciado": "Qual conjunto estrutural na cena sustenta os eletrodutos aéreos por meio de perfilado metálico e barras roscadas ancoradas na laje superior?",
+        "contexto_normativo": "NEC 358.30 · Securing & Supporting EMT",
+        "alternativas": [
+          {
+            "id": "a",
+            "texto": "Suporte Trapeze (Hanger_01)",
+            "correta": true,
+            "objeto_alvo": "Hanger_01",
+            "camera_foco": [1.65, 2.25, 1.45],
+            "alvo_lookat": [0.2, 2.18, -0.35],
+            "rotulo": "Hanger_01 · Trapeze Unistrut",
+            "feedback": "Correto! O Hanger_01 é o suporte trapeze completo (barras roscadas + perfilado perfurado + porcas), essencial para nivelar os eletrodutos e constar no Shop Drawing com cota de fundo."
+          },
+          {
+            "id": "b",
+            "texto": "Duto Retangular (Duct_HVAC)",
+            "correta": false,
+            "objeto_alvo": "Duct_HVAC",
+            "camera_foco": [2.2, 2.8, 1.8],
+            "alvo_lookat": [0.4, 2.65, -0.4],
+            "rotulo": "Duct_HVAC · Proibido Apoiar Conduíte",
+            "feedback": "Incorreto! Nunca se deve usar dutos de HVAC como ponto de apoio ou fixação para eletrodutos elétricos (violação NEC 300.11)."
+          },
+          {
+            "id": "c",
+            "texto": "Tubulação Frontal (Pipe_Conflito_Frontal)",
+            "correta": false,
+            "objeto_alvo": "Pipe_Conflito_Frontal",
+            "camera_foco": [0.4, 1.8, 1.5],
+            "alvo_lookat": [-1.55, 1.6, -0.75],
+            "rotulo": "Pipe_Conflito_Frontal · Tubo Hidráulico",
+            "feedback": "Incorreto! Além de ser uma interferência na frente do QGBT, a NEC proíbe apoiar eletrodutos em tubulações hidráulicas ou sprinklers."
+          },
+          {
+            "id": "d",
+            "texto": "Envoltório do Painel (Painel_QGBT)",
+            "correta": false,
+            "objeto_alvo": "Painel_QGBT",
+            "camera_foco": [0.85, 1.65, 1.8],
+            "alvo_lookat": [-1.8, 1.25, -1.6],
+            "rotulo": "Painel_QGBT",
+            "feedback": "Incorreto. O painel recebe os eletrodutos em seus conectores, mas os trechos horizontais precisam de suportes independentes a cada 3m (e a até 90cm da saída)."
+          }
+        ]
+      },
+      {
+        "id": "5.3-q2",
+        "enunciado": "Qual a distância máxima recomendada entre a saída de um painel/caixa e o primeiro suporte (como o Hanger_01) em eletrodutos EMT segundo a norma NEC?",
+        "contexto_normativo": "NEC 358.30(A) · First Support Distance",
+        "alternativas": [
+          {
+            "id": "a",
+            "texto": "Máximo 0,90 m (3 feet) da caixa ou painel até o Hanger_01",
+            "correta": true,
+            "objeto_alvo": "Hanger_01",
+            "camera_foco": [1.55, 2.25, 1.5],
+            "alvo_lookat": [0.2, 2.18, -0.35],
+            "rotulo": "NEC 358.30(A) · <= 0,90m (3 ft)",
+            "feedback": "Exato! Todo eletroduto EMT deve ser firmemente fixado dentro de 90 cm (3 pés) de cada caixa de passagem, acoplamento ou painel, evitando esforços mecânicos nos conectores."
+          },
+          {
+            "id": "b",
+            "texto": "Até 6,00 m sem suportes intermediários",
+            "correta": false,
+            "objeto_alvo": "Conduit_05_HalfInch",
+            "camera_foco": [1.5, 2.3, 1.2],
+            "alvo_lookat": [0.1, 2.15, -1.0],
+            "rotulo": "Violação Mecânica",
+            "feedback": "Incorreto. Com 6 metros sem suporte, o eletroduto EMT empena e rompe os conectores no painel."
+          },
+          {
+            "id": "c",
+            "texto": "Não precisa de suporte se passar perto do Duct_HVAC",
+            "correta": false,
+            "objeto_alvo": "Duct_HVAC",
+            "camera_foco": [2.2, 2.8, 1.8],
+            "alvo_lookat": [0.4, 2.65, -0.4],
+            "rotulo": "Duct_HVAC · Proibido",
+            "feedback": "Incorreto. Proximidade com dutos nunca substitui a ancoragem estrutural independente."
+          }
+        ]
+      }
+    ],
+    "atividadePratica": {
+      "ativa": true,
+      "titulo": "Detalhe Executivo de Suportação (Trapeze Hanger)",
+      "instrucoes": "Envie uma imagem ou PDF contendo um corte/detalhe de suporte Trapeze com cota de altura (BOP), comprimento do perfilado e espaçamento entre barras roscadas.",
+      "entregavel": "Imagem PNG/JPG ou PDF do detalhe"
+    }
+  },
+  {
+    "id": "5.4",
+    "codigo": "5.4",
+    "titulo": "5.4 Boxes",
+    "ilhaId": "ilha-3",
+    "ilhaNome": "Modelagem Construtiva",
+    "duracaoSegundos": 56,
+    "videoResumo": "Caixas de passagem e derivação (Junction & Pull Boxes): cálculo de tamanho pela NEC 314.28 (6x ou 8x o diâmetro do maior eletroduto) e acesso pós-forro.",
+    "videoTopicos": [
+      "Pull Box Straight Pull (8x) vs Angle Pull (6x)",
+      "Tampa voltada para área acessível acima do forro",
+      "Anotação de TAG de caixa no Shop Drawing"
+    ],
+    "quiz": [
+      {
+        "id": "5.4-q1",
+        "enunciado": "Se instalarmos uma caixa de passagem intermediária na linha de 3/4\" (Conduit_075_ThreeQuarter) logo abaixo do teto, qual elemento superior precisa ser verificado para garantir que a tampa da caixa continue acessível?",
+        "contexto_normativo": "NEC 314.29 · Junction Boxes Accessible",
+        "alternativas": [
+          {
+            "id": "a",
+            "texto": "Duct_HVAC (para que o duto não bloqueie a tampa da caixa)",
+            "correta": true,
+            "objeto_alvo": "Duct_HVAC",
+            "camera_foco": [2.1, 2.75, 1.6],
+            "alvo_lookat": [0.4, 2.65, -0.4],
+            "rotulo": "Duct_HVAC · Conferência de Acesso",
+            "feedback": "Correto! É erro clássico posicionar caixas de passagem imediatamente sob ou sobre dutos largos de HVAC, tornando impossível abrir a tampa em campo."
+          },
+          {
+            "id": "b",
+            "texto": "Painel_QGBT no piso",
+            "correta": false,
+            "objeto_alvo": "Painel_QGBT",
+            "camera_foco": [0.85, 1.65, 1.8],
+            "alvo_lookat": [-1.8, 1.25, -1.6],
+            "rotulo": "Painel_QGBT",
+            "feedback": "Incorreto. O painel na parede não bloqueia o acesso superior da caixa aérea."
+          },
+          {
+            "id": "c",
+            "texto": "Pipe_Conflito_Frontal",
+            "correta": false,
+            "objeto_alvo": "Pipe_Conflito_Frontal",
+            "camera_foco": [0.4, 1.8, 1.5],
+            "alvo_lookat": [-1.55, 1.6, -0.75],
+            "rotulo": "Pipe_Conflito_Frontal",
+            "feedback": "Incorreto. O tubo frontal está bloqueando o QGBT, não a linha aérea de 3/4\"."
+          }
+        ]
+      }
+    ],
+    "atividadePratica": {
+      "ativa": false,
+      "titulo": "Dimensionamento de Pull Box",
+      "instrucoes": "Opcional: envie croqui de caixa de passagem com medidas 6x/8x.",
+      "entregavel": "Imagem ou PDF"
+    }
+  },
+  {
+    "id": "5.5",
+    "codigo": "5.5",
+    "titulo": "5.5 Corridors",
+    "ilhaId": "ilha-3",
+    "ilhaNome": "Modelagem Construtiva",
+    "duracaoSegundos": 61,
+    "videoResumo": "Estratégia de corredores (Corridor Coordination): ocupação de camadas verticais (Elevation Tiers) entre HVAC, Sprinklers, Hidráulica e Eletrocalhas/Conduítes.",
+    "videoTopicos": [
+      "Definindo faixas de elevação (Zones) antes de modelar",
+      "Racks compartilhados (Multi-trade Racks)",
+      "Evitando cruzamentos desnecessários nos corredores principais"
+    ],
+    "quiz": [
+      {
+        "id": "5.5-q1",
+        "enunciado": "Num corredor técnico congestionado, qual elemento costuma ocupar a camada mais alta e volumosa junto ao teto devido à baixa flexibilidade de desvios?",
+        "contexto_normativo": "VDC Corridor Layering",
+        "alternativas": [
+          {
+            "id": "a",
+            "texto": "Duct_HVAC",
+            "correta": true,
+            "objeto_alvo": "Duct_HVAC",
+            "camera_foco": [2.2, 2.8, 1.8],
+            "alvo_lookat": [0.4, 2.65, -0.4],
+            "rotulo": "Duct_HVAC · Camada Superior",
+            "feedback": "Correto! Dutos de HVAC ocupam grande seção transversal e possuem alto custo de desvios, sendo alocados primeiro nas cotas superiores do corredor."
+          },
+          {
+            "id": "b",
+            "texto": "Conduit_05_HalfInch",
+            "correta": false,
+            "objeto_alvo": "Conduit_05_HalfInch",
+            "camera_foco": [1.5, 2.3, 1.2],
+            "alvo_lookat": [0.1, 2.15, -1.0],
+            "rotulo": "Conduit_05_HalfInch · Alta Flexibilidade",
+            "feedback": "Incorreto. Eletrodutos EMT são fáceis de curvar e se adaptam às faixas inferiores ou laterais."
+          },
+          {
+            "id": "c",
+            "texto": "Painel_QGBT",
+            "correta": false,
+            "objeto_alvo": "Painel_QGBT",
+            "camera_foco": [0.85, 1.65, 1.8],
+            "alvo_lookat": [-1.8, 1.25, -1.6],
+            "rotulo": "Painel_QGBT",
+            "feedback": "Incorreto. Painéis ficam instalados nas paredes de salas dedicadas."
+          }
+        ]
+      }
+    ],
+    "atividadePratica": {
+      "ativa": false,
+      "titulo": "Corte Típico de Corredor",
+      "instrucoes": "Opcional: envie corte transversal de corredor mostrando todas as disciplinas.",
+      "entregavel": "Imagem ou PDF"
+    }
+  },
+  {
+    "id": "5.6",
+    "codigo": "5.6",
+    "titulo": "5.6 Feeders/Power",
+    "ilhaId": "ilha-3",
+    "ilhaNome": "Modelagem Construtiva",
+    "duracaoSegundos": 63,
+    "videoResumo": "Modelagem de alimentadores principais (Feeders) e circuitos de força (Power): raios de curva longos para cabos grossos e transições verticais em shafts.",
+    "videoTopicos": [
+      "Diferença de raio de curvatura entre 1/2\" e alimentadores grandes",
+      "Alinhamento de furos (Sleeves) em lajes e paredes corta-fogo",
+      "Cotas de eixo no Shop Drawing para pré-fabricação"
+    ],
+    "quiz": [
+      {
+        "id": "5.6-q1",
+        "enunciado": "Qual elemento da sala elétrica representa o ponto de partida físico de todos os feeders modelados para os quadros setoriais?",
+        "contexto_normativo": "VDC · Feeder Routing",
+        "alternativas": [
+          {
+            "id": "a",
+            "texto": "Painel_QGBT",
+            "correta": true,
+            "objeto_alvo": "Painel_QGBT",
+            "camera_foco": [0.9, 1.75, 2.0],
+            "alvo_lookat": [-1.8, 1.25, -1.6],
+            "rotulo": "Painel_QGBT · Origem dos Feeders",
+            "feedback": "Correto! O QGBT é a origem dos alimentadores principais; o espaçamento dos furos de saída no topo do painel deve ser cotado no Shop Drawing."
+          },
+          {
+            "id": "b",
+            "texto": "Duct_HVAC",
+            "correta": false,
+            "objeto_alvo": "Duct_HVAC",
+            "camera_foco": [2.2, 2.8, 1.8],
+            "alvo_lookat": [0.4, 2.65, -0.4],
+            "rotulo": "Duct_HVAC",
+            "feedback": "Incorreto. O duto é apenas referência de interferência."
+          },
+          {
+            "id": "c",
+            "texto": "Pipe_Conflito_Frontal",
+            "correta": false,
+            "objeto_alvo": "Pipe_Conflito_Frontal",
+            "camera_foco": [0.4, 1.8, 1.5],
+            "alvo_lookat": [-1.55, 1.6, -0.75],
+            "rotulo": "Pipe_Conflito_Frontal",
+            "feedback": "Incorreto. Essa tubulação é uma colisão hidráulica a ser removida."
+          }
+        ]
+      }
+    ],
+    "atividadePratica": {
+      "ativa": false,
+      "titulo": "Rota de Feeder",
+      "instrucoes": "Opcional: envie planta com cotas de chegada no painel.",
+      "entregavel": "Imagem ou PDF"
+    }
+  },
+  {
+    "id": "5.7",
+    "codigo": "5.7",
+    "titulo": "5.7 Parameters (metadata)",
+    "ilhaId": "ilha-3",
+    "ilhaNome": "Modelagem Construtiva",
+    "duracaoSegundos": 54,
+    "videoResumo": "O 'I' do BIM: preenchimento de Shared Parameters para rastreabilidade em obra — Circuitos, Origem/Destino, Diâmetro, Peso e Status de Pré-fabricação.",
+    "videoTopicos": [
+      "Shared Parameters vs Project Parameters",
+      "Tags inteligentes lendo automaticamente os metadados do modelo",
+      "Exportação de dados para fabricação em oficina (Prefab)"
+    ],
+    "quiz": [
+      {
+        "id": "5.7-q1",
+        "enunciado": "Para que uma Tag de eletroduto exiba automaticamente '3/4\" EMT - CKT 1,3,5' na prancha sem texto manual, qual objeto precisa ter seus Shared Parameters preenchidos?",
+        "contexto_normativo": "BIM Metadata · Shared Parameters",
+        "alternativas": [
+          {
+            "id": "a",
+            "texto": "Conduit_075_ThreeQuarter",
+            "correta": true,
+            "objeto_alvo": "Conduit_075_ThreeQuarter",
+            "camera_foco": [1.8, 2.35, 1.4],
+            "alvo_lookat": [0.3, 2.15, -0.7],
+            "rotulo": "Conduit_075_ThreeQuarter · Metadados BIM",
+            "feedback": "Correto! Quando cada trecho do Conduit_075 armazena os parâmetros de diâmetro e circuitos vinculados, as Tags das pranchas nunca ficam desatualizadas."
+          },
+          {
+            "id": "b",
+            "texto": "Duct_HVAC",
+            "correta": false,
+            "objeto_alvo": "Duct_HVAC",
+            "camera_foco": [2.2, 2.8, 1.8],
+            "alvo_lookat": [0.4, 2.65, -0.4],
+            "rotulo": "Duct_HVAC",
+            "feedback": "Incorreto. O duto HVAC contém parâmetros mecânicos de vazão de ar (CFM)."
+          },
+          {
+            "id": "c",
+            "texto": "Pipe_Conflito_Frontal",
+            "correta": false,
+            "objeto_alvo": "Pipe_Conflito_Frontal",
+            "camera_foco": [0.4, 1.8, 1.5],
+            "alvo_lookat": [-1.55, 1.6, -0.75],
+            "rotulo": "Pipe_Conflito_Frontal",
+            "feedback": "Incorreto. Essa tubulação não recebe TAG de circuito elétrico."
+          }
+        ]
+      }
+    ],
+    "atividadePratica": {
+      "ativa": false,
+      "titulo": "Tabela de Shared Parameters",
+      "instrucoes": "Opcional: envie print do painel de propriedades preenchido.",
+      "entregavel": "Imagem ou PDF"
+    }
+  },
+  {
+    "id": "5.8",
+    "codigo": "5.8",
+    "titulo": "5.8 Layout Drawing",
+    "ilhaId": "ilha-3",
+    "ilhaNome": "Modelagem Construtiva",
+    "duracaoSegundos": 66,
+    "videoResumo": "Montagem final do Layout Drawing (Shop Drawing): cotas a partir de eixos estruturais (Grids), elevações BOP (Bottom of Pipe/Conduit), Tags e notas executivas.",
+    "videoTopicos": [
+      "Nunca cotar a partir de elementos móveis — usar Grid Lines e paredes estruturais",
+      "Indicação clara de elevação BOP nos eletrodutos e hangers",
+      "Padronização de carimbo, escala e revisão"
+    ],
+    "quiz": [
+      {
+        "id": "5.8-q1",
+        "enunciado": "Num Shop Drawing executivo pronto para ir à obra, qual conjunto deve receber cotas de altura (BOP) a partir do piso acabado e distância entre eixos estruturais?",
+        "contexto_normativo": "VDC · Shop Drawing Standards",
+        "alternativas": [
+          {
+            "id": "a",
+            "texto": "Racks de eletrodutos e suportes (Hanger_01 / Conduit_075_ThreeQuarter)",
+            "correta": true,
+            "objeto_alvo": "Hanger_01",
+            "camera_foco": [1.85, 2.3, 1.65],
+            "alvo_lookat": [0.2, 2.15, -0.35],
+            "rotulo": "Hanger_01 · Cota BOP Obrigatória",
+            "feedback": "Correto! A equipe de campo posiciona os chumbadores e regula a altura do perfilado exatamente pelas cotas de eixo estrutural e BOP indicadas no Shop Drawing."
+          },
+          {
+            "id": "b",
+            "texto": "Apenas a tubulação interferente (Pipe_Conflito_Frontal)",
+            "correta": false,
+            "objeto_alvo": "Pipe_Conflito_Frontal",
+            "camera_foco": [0.4, 1.8, 1.5],
+            "alvo_lookat": [-1.55, 1.6, -0.75],
+            "rotulo": "Pipe_Conflito_Frontal",
+            "feedback": "Incorreto. Interferências devem ser resolvidas antes da emissão da prancha."
+          },
+          {
+            "id": "c",
+            "texto": "Somente o interior do Duct_HVAC",
+            "correta": false,
+            "objeto_alvo": "Duct_HVAC",
+            "camera_foco": [2.2, 2.8, 1.8],
+            "alvo_lookat": [0.4, 2.65, -0.4],
+            "rotulo": "Duct_HVAC",
+            "feedback": "Incorreto. O detalhamento executivo dos dutos é responsabilidade da equipe HVAC."
+          }
+        ]
+      }
+    ],
+    "atividadePratica": {
+      "ativa": true,
+      "titulo": "Prancha Final de Layout Drawing",
+      "instrucoes": "Envie uma prancha (PDF ou imagem de alta resolução) com cotas referenciadas a eixos, tags de eletroduto e cota de elevação BOP.",
+      "entregavel": "PDF ou Imagem da prancha"
+    }
+  },
+  {
+    "id": "6.1",
+    "codigo": "6.1",
+    "titulo": "6.1 Accessibility",
+    "ilhaId": "ilha-4",
+    "ilhaNome": "Coordenação",
+    "duracaoSegundos": 58,
+    "videoResumo": "Acessibilidade e ergonomia operacional: garantia de rotas livres até painéis, chaves seccionadoras e caixas de inspeção sem necessidade de desmontar outras disciplinas.",
+    "videoTopicos": [
+      "Altura mínima livre (Headroom) de 2,00m segundo NEC 110.26(A)(3)",
+      "Acesso desobstruído à entrada e saída da sala elétrica",
+      "Verificação de interferências em altura de escada de manutenção"
+    ],
+    "quiz": [
+      {
+        "id": "6.1-q1",
+        "enunciado": "Qual elemento está violando o acesso físico (Headroom e profundidade de acesso) em frente ao painel elétrico principal?",
+        "contexto_normativo": "NEC 110.26(A)(3) · Height of Working Space",
+        "alternativas": [
+          {
+            "id": "a",
+            "texto": "Pipe_Conflito_Frontal",
+            "correta": true,
+            "objeto_alvo": "Pipe_Conflito_Frontal",
+            "camera_foco": [0.4, 1.75, 1.45],
+            "alvo_lookat": [-1.55, 1.6, -0.75],
+            "rotulo": "Pipe_Conflito_Frontal · Violação de Acesso",
+            "feedback": "Correto! A tubulação cruza a 1,60m de altura exatamente na frente do painel, violando o mínimo de 2,00m de pé-direito livre exigido pela NEC."
+          },
+          {
+            "id": "b",
+            "texto": "Conduit_075_ThreeQuarter",
+            "correta": false,
+            "objeto_alvo": "Conduit_075_ThreeQuarter",
+            "camera_foco": [1.8, 2.35, 1.4],
+            "alvo_lookat": [0.3, 2.15, -0.7],
+            "rotulo": "Conduit_075_ThreeQuarter",
+            "feedback": "Incorreto. O eletroduto de 3/4\" está a mais de 2,15m de altura e recuado da frente do operador."
+          },
+          {
+            "id": "c",
+            "texto": "Hanger_01",
+            "correta": false,
+            "objeto_alvo": "Hanger_01",
+            "camera_foco": [1.9, 2.3, 1.7],
+            "alvo_lookat": [0.2, 2.15, -0.35],
+            "rotulo": "Hanger_01",
+            "feedback": "Incorreto. O suporte está elevado junto ao teto sem obstruir a circulação."
+          }
+        ]
+      }
+    ],
+    "atividadePratica": {
+      "ativa": false,
+      "titulo": "Relatório de Acessibilidade",
+      "instrucoes": "Opcional: envie print de seção mostrando cota livre de 2,00m.",
+      "entregavel": "Imagem ou PDF"
+    }
+  },
+  {
+    "id": "6.2",
+    "codigo": "6.2",
+    "titulo": "6.2 Maintenance",
+    "ilhaId": "ilha-4",
+    "ilhaNome": "Coordenação",
+    "duracaoSegundos": 74,
+    "videoResumo": "Espaço de Manutenção e Operação Segura (NEC 110.26 / NR-10): como auditar no modelo 3D a zona frontal de 90cm–120cm, abertura de portas e retirada de gavetas.",
+    "videoTopicos": [
+      "Por que a manutenção exige zona frontal livre até 2,00m de altura (ou altura do equipamento)",
+      "Risco elétrico (Arc Flash) se o técnico não tiver rota de recuo livre",
+      "Como identificar e reportar uma tubulação invasora na reunião de coordenação"
+    ],
+    "quiz": [
+      {
+        "id": "6.2-q1",
+        "enunciado": "Durante a auditoria de manutenção (NR-10 / NEC 110.26) na sala elétrica, qual elemento impede a abertura segura da porta e o recuo do técnico diante do quadro energizado?",
+        "contexto_normativo": "NEC 110.26 · Working Clearance & Maintenance",
+        "alternativas": [
+          {
+            "id": "a",
+            "texto": "Tubulação atravessando a zona frontal (Pipe_Conflito_Frontal)",
+            "correta": true,
+            "objeto_alvo": "Pipe_Conflito_Frontal",
+            "camera_foco": [0.35, 1.7, 1.4],
+            "alvo_lookat": [-1.55, 1.6, -0.75],
+            "rotulo": "Pipe_Conflito_Frontal · RISCO DE MANUTENÇÃO",
+            "feedback": "Correto! A tubulação invade diretamente o prisma frontal de trabalho do QGBT (~1,0m de profundidade x 2,0m de altura), bloqueando a abertura de portas e colocando em risco a rota de fuga do técnico."
+          },
+          {
+            "id": "b",
+            "texto": "O próprio quadro elétrico (Painel_QGBT)",
+            "correta": false,
+            "objeto_alvo": "Painel_QGBT",
+            "camera_foco": [0.85, 1.65, 1.8],
+            "alvo_lookat": [-1.8, 1.25, -1.6],
+            "rotulo": "Painel_QGBT · Equipamento Auditado",
+            "feedback": "Incorreto. O Painel_QGBT é o equipamento que precisa ter seu espaço frontal preservado, não o agente causador da obstrução."
+          },
+          {
+            "id": "c",
+            "texto": "O duto de ar superior (Duct_HVAC)",
+            "correta": false,
+            "objeto_alvo": "Duct_HVAC",
+            "camera_foco": [2.2, 2.8, 1.8],
+            "alvo_lookat": [0.4, 2.65, -0.4],
+            "rotulo": "Duct_HVAC · Cota Elevada",
+            "feedback": "Incorreto. O Duct_HVAC está a 2,65m de altura e deslocado para o corredor central, fora da projeção frontal crítica do QGBT."
+          },
+          {
+            "id": "d",
+            "texto": "O suporte aéreo (Hanger_01)",
+            "correta": false,
+            "objeto_alvo": "Hanger_01",
+            "camera_foco": [1.85, 2.3, 1.65],
+            "alvo_lookat": [0.2, 2.15, -0.35],
+            "rotulo": "Hanger_01 · Cota Livre",
+            "feedback": "Incorreto. O Hanger_01 sustenta os eletrodutos no eixo de distribuição sem interferir na área frontal do painel."
+          }
+        ]
+      },
+      {
+        "id": "6.2-q2",
+        "enunciado": "Qual a profundidade mínima exigida na frente de um painel 480V (Condição 2 - parede aterrada oposta ou equipamentos) para garantir manutenção segura?",
+        "contexto_normativo": "NEC Table 110.26(A)(1) · 151–600V",
+        "alternativas": [
+          {
+            "id": "a",
+            "texto": "1,07 m (3 ft 6 in) a 1,22 m (4 ft) livres em frente ao Painel_QGBT",
+            "correta": true,
+            "objeto_alvo": "Painel_QGBT",
+            "camera_foco": [0.9, 1.65, 2.1],
+            "alvo_lookat": [-1.75, 0.9, -1.2],
+            "rotulo": "Painel_QGBT · Zona 1,07m–1,22m",
+            "feedback": "Correto! Para tensões nominais à terra entre 151V e 600V (sistemas 480/277V), a NEC exige no mínimo 3'6\" (~1,07m) na Condição 2 e 4' (~1,22m) na Condição 3."
+          },
+          {
+            "id": "b",
+            "texto": "0,40 m apenas para passar o Conduit_05_HalfInch",
+            "correta": false,
+            "objeto_alvo": "Conduit_05_HalfInch",
+            "camera_foco": [1.5, 2.3, 1.2],
+            "alvo_lookat": [0.1, 2.15, -1.0],
+            "rotulo": "Espaço Insuficiente",
+            "feedback": "Incorreto! 40 cm é completamente inseguro e não permite sequer abrir a porta de um QGBT."
+          },
+          {
+            "id": "c",
+            "texto": "Pode ser 0 m se o Pipe_Conflito_Frontal estiver isolado",
+            "correta": false,
+            "objeto_alvo": "Pipe_Conflito_Frontal",
+            "camera_foco": [0.4, 1.8, 1.5],
+            "alvo_lookat": [-1.55, 1.6, -0.75],
+            "rotulo": "Violação Crítica",
+            "feedback": "Incorreto! Isolamento térmico não anula a exigência normativa do espaço de trabalho elétrico."
+          }
+        ]
+      }
+    ],
+    "atividadePratica": {
+      "ativa": true,
+      "titulo": "Relatório de Clash de Manutenção (BCF / Print 3D)",
+      "instrucoes": "Envie uma captura de tela ou PDF marcando uma zona de manutenção (Working Clearance) livre e apontando eventuais interferências em modelo BIM.",
+      "entregavel": "Imagem PNG/JPG ou PDF do clash report"
+    }
+  },
+  {
+    "id": "6.3",
+    "codigo": "6.3",
+    "titulo": "6.3 Trades Priority",
+    "ilhaId": "ilha-4",
+    "ilhaNome": "Coordenação",
+    "duracaoSegundos": 59,
+    "videoResumo": "Hierarquia de Prioridade entre Disciplinas (Trades Priority): por que esgoto por gravidade e dutos principais têm precedência sobre eletrodutos EMT flexíveis.",
+    "videoTopicos": [
+      "1º Estrutura -> 2º Gravidade (Esgoto/Pluvial) -> 3º Grandes Dutos HVAC -> 4º Pressurizados & Elétrica",
+      "Quando a elétrica tem prioridade absoluta: dentro de salas elétricas dedicadas",
+      "Negociação colaborativa na reunião de coordenação semanal"
+    ],
+    "quiz": [
+      {
+        "id": "6.3-q1",
+        "enunciado": "Fora da sala elétrica (nos corredores gerais), entre um grande duto retangular e um eletroduto de 1/2\", quem detém prioridade de traçado reto pela dificuldade e custo de desvio?",
+        "contexto_normativo": "VDC Coordination · Hierarchy Rules",
+        "alternativas": [
+          {
+            "id": "a",
+            "texto": "Duct_HVAC (Prioridade sobre eletrodutos nos corredores)",
+            "correta": true,
+            "objeto_alvo": "Duct_HVAC",
+            "camera_foco": [2.2, 2.8, 1.8],
+            "alvo_lookat": [0.4, 2.65, -0.4],
+            "rotulo": "Duct_HVAC · Alta Prioridade",
+            "feedback": "Correto! Nos corredores, grandes dutos HVAC têm prioridade sobre eletrodutos pequenos, que podem fazer offsets facilmente com dobradeira."
+          },
+          {
+            "id": "b",
+            "texto": "Conduit_05_HalfInch (Prioridade absoluta em qualquer local)",
+            "correta": false,
+            "objeto_alvo": "Conduit_05_HalfInch",
+            "camera_foco": [1.5, 2.3, 1.2],
+            "alvo_lookat": [0.1, 2.15, -1.0],
+            "rotulo": "Conduit_05_HalfInch · Fácil Desvio",
+            "feedback": "Incorreto. Um EMT de 1/2\" é o elemento mais fácil de desviar na obra; ele só tem prioridade absoluta dentro de salas elétricas exclusivas."
+          },
+          {
+            "id": "c",
+            "texto": "Hanger_01",
+            "correta": false,
+            "objeto_alvo": "Hanger_01",
+            "camera_foco": [1.9, 2.3, 1.7],
+            "alvo_lookat": [0.2, 2.15, -0.35],
+            "rotulo": "Hanger_01",
+            "feedback": "Incorreto. O suporte acompanha a posição final do eletroduto."
+          }
+        ]
+      }
+    ],
+    "atividadePratica": {
+      "ativa": false,
+      "titulo": "Matriz de Prioridade",
+      "instrucoes": "Opcional: envie resumo de decisão de desvio em corredor.",
+      "entregavel": "Imagem ou PDF"
+    }
+  },
+  {
+    "id": "6.4",
+    "codigo": "6.4",
+    "titulo": "6.4 Clash Solving",
+    "ilhaId": "ilha-4",
+    "ilhaNome": "Coordenação",
+    "duracaoSegundos": 68,
+    "videoResumo": "Resolução prática de interferências (Clash Solving): como propor soluções viáveis no Navisworks/Revit (desvio vertical, redução de perfil, troca de rota) sem criar novos clashes.",
+    "videoTopicos": [
+      "Hard Clash vs Soft Clash (Clearance) vs Workflow Clash",
+      "Propondo desvios com 2 opções viáveis na reunião BIM",
+      "Validação final pós-ajuste antes de liberar para campo (IFC / Issued for Construction)"
+    ],
+    "quiz": [
+      {
+        "id": "6.4-q1",
+        "enunciado": "Para resolver o Soft Clash crítico identificado na frente do QGBT, qual elemento deve ser desviado para o corredor lateral ou elevado acima da zona de acesso?",
+        "contexto_normativo": "VDC · Clash Resolution",
+        "alternativas": [
+          {
+            "id": "a",
+            "texto": "Pipe_Conflito_Frontal",
+            "correta": true,
+            "objeto_alvo": "Pipe_Conflito_Frontal",
+            "camera_foco": [0.35, 1.75, 1.45],
+            "alvo_lookat": [-1.55, 1.6, -0.75],
+            "rotulo": "Pipe_Conflito_Frontal · Desviar Rota",
+            "feedback": "Correto! Dentro da Sala Elétrica, o Painel_QGBT tem prioridade normativa absoluta. A tubulação intrusa (Pipe_Conflito_Frontal) deve ser reroteada por fora da projeção frontal."
+          },
+          {
+            "id": "b",
+            "texto": "Remover o Painel_QGBT da sala elétrica",
+            "correta": false,
+            "objeto_alvo": "Painel_QGBT",
+            "camera_foco": [0.85, 1.65, 1.8],
+            "alvo_lookat": [-1.8, 1.25, -1.6],
+            "rotulo": "Painel_QGBT · Prioridade Máxima",
+            "feedback": "Incorreto! O painel define a função da sala elétrica; sistemas estranhos é que precisam contorná-lo."
+          },
+          {
+            "id": "c",
+            "texto": "Desmontar o Hanger_01",
+            "correta": false,
+            "objeto_alvo": "Hanger_01",
+            "camera_foco": [1.9, 2.3, 1.7],
+            "alvo_lookat": [0.2, 2.15, -0.35],
+            "rotulo": "Hanger_01",
+            "feedback": "Incorreto. O suporte aéreo não está causando o conflito frontal."
+          }
+        ]
+      }
+    ],
+    "atividadePratica": {
+      "ativa": true,
+      "titulo": "Dossiê Final de Clash Solving",
+      "instrucoes": "Envie um PDF ou imagem mostrando o 'Antes e Depois' da resolução de um clash elétrico (com cotas ou setas de desvio).",
+      "entregavel": "Imagem PNG/JPG ou PDF"
+    }
+  }
+]

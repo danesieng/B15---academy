@@ -1,0 +1,6 @@
+{
+  "name": "VoltBIM Academy — VDC Electrical",
+  "description": "Plataforma gamificada de ensino BIM/VDC Electrical (Shop Drawings) no formato Pós-Episódio com visualizador Three.js interativo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
